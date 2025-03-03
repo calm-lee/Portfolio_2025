@@ -101,27 +101,27 @@ const NavBar = () => {
             />
           </div>
           <li>
-            <a href="#top" className="font-Ovo">
+            <a href="#top" onClick={closeMenu} className="font-Ovo">
               Home
             </a>
           </li>
           <li>
-            <a href="#about" className="font-Ovo">
+            <a href="#about" onClick={closeMenu} className="font-Ovo">
               About me
             </a>
           </li>
           <li>
-            <a href="#services" className="font-Ovo">
+            <a href="#services" onClick={closeMenu} className="font-Ovo">
               Services
             </a>
           </li>
           <li>
-            <a href="#work" className="font-Ovo">
+            <a href="#work" onClick={closeMenu} className="font-Ovo">
               My Work
             </a>
           </li>
           <li>
-            <a href="#contact" className="font-Ovo">
+            <a href="#contact" onClick={closeMenu} className="font-Ovo">
               Contact me
             </a>
           </li>
