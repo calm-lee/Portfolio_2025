@@ -22,7 +22,7 @@ export default function About() {
                 key={index}
               >
                 <Image src={icon} alt={title} />
-                <h3 className={"my-4 font-semibold text-gray-700"}>{title}</h3>
+                <h3 className={"my-3 font-semibold text-gray-700"}>{title}</h3>
                 <p className={"text-gray-600 text-sm"}>{description}</p>
               </li>
             ),
