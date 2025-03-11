@@ -9,28 +9,29 @@ export default function Work() {
       <p className={"text-center max-w-2xl mx-auto mt-5 mb-10 font-Ovo"}>
         Explore the website I worked on.
       </p>
-      <div className={"flex justify-center"}>
-        <div className={"grid grid-cols-auto md:grid-cols-4 gap-6 my-10"}>
-          {workData.map(({ title, description, bgImage }, index) => (
+      <div className={"grid grid-cols-auto gap-5 my-10"}>
+        {workData.map(({ title, description, bgImage }, index) => (
+          <div
+            className={
+              "aspect-square rounded-xl bg-cover bg-center bg-no-repeat relative cursor-pointer group"
+            }
+            style={{ backgroundImage: `url(${bgImage})` }}
+          >
             <div
-              key={index}
               className={
-                "aspect-square bg-no-repeat bg-cover bg-center rounded-lg relative cursor-pointer group"
+                "bg-white w-11/12 flex justify-between items-center rounded-md absolute bottom-5 left-1/2 -translate-x-1/2 px-5 py-3 group-hover:bottom-7 duration-500"
               }
-              style={{
-                backgroundImage: `url(${bgImage})`,
-              }}
             >
               <div>
                 <h2>{title}</h2>
                 <p>{description}</p>
               </div>
               <div>
-                <Image src={assets.send_icon} alt={"send_icon"} />
+                <Image src={assets.send_icon} alt={""} className={"w-5"} />
               </div>
             </div>
-          ))}
-        </div>
+          </div>
+        ))}
       </div>
     </div>
   );
