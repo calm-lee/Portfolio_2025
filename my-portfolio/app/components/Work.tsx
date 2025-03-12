@@ -23,10 +23,14 @@ export default function Work() {
               }
             >
               <div>
-                <h2>{title}</h2>
-                <p>{description}</p>
+                <h2 className={"font-semibold"}>{title}</h2>
+                <p className={"text-sm text-gray-700"}>{description}</p>
               </div>
-              <div>
+              <div
+                className={
+                  "border border-black rounded-full w-9 aspect-square flex justify-center items-center shadow-[2px_2px_0_#000] group-hover:bg-lime-300 transition"
+                }
+              >
                 <Image src={assets.send_icon} alt={""} className={"w-5"} />
               </div>
             </div>
