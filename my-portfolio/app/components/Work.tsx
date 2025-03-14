@@ -6,12 +6,17 @@ export default function Work() {
     <div id={"work"} className={"w-full px-[12%] py-10 scroll-mt-20"}>
       <h4 className={"text-center mb-2 text-lg font-Ovo"}>My portfolio</h4>
       <h2 className={"text-center text-5xl font-Ovo"}>My latest work</h2>
-      <p className={"text-center max-w-2xl mx-auto mt-5 mb-10 font-Ovo"}>
+      <p
+        className={
+          "text-center max-w-2xl mx-auto mt-5 mb-10 font-Ovo text-gray-600"
+        }
+      >
         Explore the website I worked on.
       </p>
       <div className={"grid grid-cols-auto gap-5 my-10"}>
         {workData.map(({ title, description, bgImage }, index) => (
           <div
+            key={index}
             className={
               "aspect-square rounded-xl bg-cover bg-center bg-no-repeat relative cursor-pointer group"
             }
@@ -24,7 +29,7 @@ export default function Work() {
             >
               <div>
                 <h2 className={"font-semibold"}>{title}</h2>
-                <p className={"text-sm text-gray-700"}>{description}</p>
+                <p className={"text-sm text-gray-600"}>{description}</p>
               </div>
               <div
                 className={
@@ -36,6 +41,14 @@ export default function Work() {
             </div>
           </div>
         ))}
+      </div>
+      <div
+        className={
+          "w-max flex justify-center items-center border-[0.5px] border-gray-400 text-sm text-gray-600 gap-2 px-8 py-3 rounded-full mx-auto my-20 hover:bg-lightHover duration-500 cursor-pointer"
+        }
+      >
+        Show more
+        <Image src={assets.right_arrow} alt={""} className={"w-3 mt-[2px]"} />
       </div>
     </div>
   );
