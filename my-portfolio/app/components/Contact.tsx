@@ -1,6 +1,31 @@
 import { assets } from "@/assets/assets";
 import Image from "next/image";
+import { useState } from "react";
 export default function Contact() {
+  const [result, setResult] = useState("");
+
+  const onSubmit = async (event: any) => {
+    event.preventDefault();
+    setResult("Sending....");
+    const formData = new FormData(event.target);
+
+    formData.append("access_key", "36985106-9e13-48a2-bd92-5359a2538b83");
+
+    const response = await fetch("https://api.web3forms.com/submit", {
+      method: "POST",
+      body: formData,
+    });
+
+    const data = await response.json();
+
+    if (data.success) {
+      setResult("Form Submitted Successfully");
+      event.target.reset();
+    } else {
+      console.log("Error", data);
+      setResult(data.message);
+    }
+  };
   return (
     <div
       id={"contact"}
@@ -18,23 +43,26 @@ export default function Contact() {
         I'd love to hear from you! If you want to contact me, please use the
         form below.
       </p>
-      <form className={"w-full flex-col justify-center items-center"}>
-        <div className={"flex justify-center gap-6"}>
+      <form onSubmit={onSubmit} className={"max-w-2xl mx-auto"}>
+        <div className={"grid grid-cols-auto gap-6"}>
           <input
             type={"text"}
             placeholder={"please write your name"}
-            className={"border border-gray-300 rounded-md w-[348px] px-3 py-3"}
+            className={"border border-gray-300 rounded-md p-3"}
+            name={"name"}
           />
           <input
             type={"email"}
             placeholder={"please write your email"}
-            className={"border border-gray-300 rounded-md w-[348px] px-3 py-3"}
+            className={"border border-gray-300 rounded-md p-3"}
+            name={"email"}
           />
         </div>
         <textarea
           rows={6}
           placeholder={"please write your message"}
           className={"border border-gray-300 rounded-md w-full px-3 py-3 my-6"}
+          name={"message"}
         />
         <button
           className={
@@ -49,6 +77,7 @@ export default function Contact() {
           />
         </button>
       </form>
+      <p className={"mt-4"}>{result}</p>
     </div>
   );
 }
