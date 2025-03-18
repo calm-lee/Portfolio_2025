@@ -1,8 +1,20 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, {
+  Dispatch,
+  SetStateAction,
+  useEffect,
+  useRef,
+  useState,
+} from "react";
 import Image from "next/image";
 import { assets } from "@/assets/assets";
 
-const NavBar = () => {
+const NavBar = ({
+  isDarkMode,
+  setDarkMode,
+}: {
+  isDarkMode: boolean;
+  setDarkMode: Dispatch<SetStateAction<boolean>>;
+}) => {
   const [isScroll, setIsScroll] = useState(false);
   const slideMenuRef = useRef<HTMLUListElement>(null);
 
@@ -73,7 +85,7 @@ const NavBar = () => {
           </li>
         </ul>
         <div className={"flex items-center gap-4"}>
-          <button>
+          <button onClick={() => setDarkMode((prev: boolean) => !prev)}>
             <Image
               src={assets.moon_icon}
               alt={"theme_logo"}

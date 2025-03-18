@@ -1,7 +1,7 @@
 import { infoList, toolsData } from "@/assets/assets";
 import Image from "next/image";
 
-export default function About() {
+export default function About({ isDarkMode }: { isDarkMode: boolean }) {
   return (
     <div id={"about"} className={"w-full px-[12%] py-10 scroll-mt-20"}>
       <h4 className={"text-center mb-2 text-lg font-Ovo"}>Introduction</h4>

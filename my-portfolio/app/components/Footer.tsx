@@ -1,7 +1,7 @@
 import { assets } from "@/assets/assets";
 import Image from "next/image";
 
-export default function Footer() {
+export default function Footer({ isDarkMode }: { isDarkMode: boolean }) {
   return (
     <div className={"mt-20 text-gray-600"}>
       <div className={"text-center"}>

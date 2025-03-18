@@ -1,7 +1,7 @@
 import { assets, serviceData } from "@/assets/assets";
 import Image from "next/image";
 
-export default function Services() {
+export default function Services({ isDarkMode }: { isDarkMode: boolean }) {
   return (
     <div id={"services"} className={"w-full px-[12%] py-10 scroll-mt-20"}>
       <h4 className={"text-center mb-2 text-lg font-Ovo"}>What I offer</h4>

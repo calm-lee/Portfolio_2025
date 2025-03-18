@@ -1,7 +1,7 @@
 import Image from "next/image";
 import { assets } from "@/assets/assets";
 
-export default function Header() {
+export default function Header({ isDarkMode }: { isDarkMode: boolean }) {
   return (
     <div
       className={

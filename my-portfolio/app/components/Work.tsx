@@ -1,7 +1,7 @@
 import { assets, workData } from "@/assets/assets";
 import Image from "next/image";
 
-export default function Work() {
+export default function Work({ isDarkMode }: { isDarkMode: boolean }) {
   return (
     <div id={"work"} className={"w-full px-[12%] py-10 scroll-mt-20"}>
       <h4 className={"text-center mb-2 text-lg font-Ovo"}>My portfolio</h4>
