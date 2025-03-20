@@ -30,14 +30,14 @@ export default function Contact({ isDarkMode }: { isDarkMode: boolean }) {
     <div
       id={"contact"}
       className={
-        "mb-28 w-full px-[12%] py-10 scroll-mt-20 bg-[url('/footer-bg-color.png')] bg-no-repeat bg-center bg-[length:90%_auto]"
+        "mb-28 w-full px-[12%] py-10 scroll-mt-20 bg-[url('/footer-bg-color.png')] bg-no-repeat bg-center bg-[length:90%_auto] dark:bg-none"
       }
     >
       <h4 className={"text-center mb-2 text-lg font-Ovo"}>Connect with me</h4>
       <h2 className={"text-center text-5xl font-Ovo"}>Get in touch</h2>
       <p
         className={
-          "text-center max-w-2xl mx-auto mt-5 mb-10 font-Ovo text-gray-600"
+          "text-center max-w-2xl mx-auto mt-5 mb-10 font-Ovo text-gray-600 dark:text-white/90"
         }
       >
         I'd love to hear from you! If you want to contact me, please use the
@@ -48,25 +48,31 @@ export default function Contact({ isDarkMode }: { isDarkMode: boolean }) {
           <input
             type={"text"}
             placeholder={"please write your name"}
-            className={"border border-gray-300 rounded-md p-3"}
+            className={
+              "border-[0.5px] outline-none border-gray-400 rounded-md p-3 dark:bg-darkHover/30 dark:border-white/90"
+            }
             name={"name"}
           />
           <input
             type={"email"}
             placeholder={"please write your email"}
-            className={"border border-gray-300 rounded-md p-3"}
+            className={
+              "border-[0.5px] outline-none border-gray-400 rounded-md p-3 dark:bg-darkHover/30 dark:border-white/90"
+            }
             name={"email"}
           />
         </div>
         <textarea
           rows={6}
           placeholder={"please write your message"}
-          className={"border border-gray-300 rounded-md w-full px-3 py-3 my-6"}
+          className={
+            "border-[0.5px] outline-none border-gray-400 rounded-md w-full px-3 py-3 my-6 dark:bg-darkHover/30 dark:border-white/90"
+          }
           name={"message"}
         />
         <button
           className={
-            "w-max bg-black/75 rounded-full px-8 py-3  mx-auto flex items-center justify-center text-white text-sm gap-2 hover:bg-black duration-500"
+            "w-max bg-black/75 rounded-full px-8 py-3  mx-auto flex items-center justify-center text-white text-sm gap-2 dark:bg-transparent hover:bg-black duration-500 dark:hover:bg-darkHover dark:border-[0.5px] dark:border-white/90"
           }
         >
           Submit now

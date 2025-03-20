@@ -8,7 +8,7 @@ export default function Work({ isDarkMode }: { isDarkMode: boolean }) {
       <h2 className={"text-center text-5xl font-Ovo"}>My latest work</h2>
       <p
         className={
-          "text-center max-w-2xl mx-auto mt-5 mb-10 font-Ovo text-gray-600"
+          "text-center max-w-2xl mx-auto mt-5 mb-10 font-Ovo text-gray-600 dark:text-white/80"
         }
       >
         Explore the website I worked on.
@@ -28,7 +28,7 @@ export default function Work({ isDarkMode }: { isDarkMode: boolean }) {
               }
             >
               <div>
-                <h2 className={"font-semibold"}>{title}</h2>
+                <h2 className={"font-semibold dark:text-black"}>{title}</h2>
                 <p className={"text-sm text-gray-600"}>{description}</p>
               </div>
               <div
@@ -44,11 +44,17 @@ export default function Work({ isDarkMode }: { isDarkMode: boolean }) {
       </div>
       <div
         className={
-          "w-max flex justify-center items-center border-[0.5px] border-gray-400 text-sm text-gray-600 gap-2 px-8 py-3 rounded-full mx-auto my-20 hover:bg-lightHover duration-500 cursor-pointer"
+          "w-max flex justify-center items-center border-[0.5px] border-gray-400 text-sm text-gray-600 gap-2 px-8 py-3 rounded-full mx-auto my-20 hover:bg-lightHover duration-500 cursor-pointer dark:text-white dark:border-white dark:hover:bg-darkHover"
         }
       >
         Show more
-        <Image src={assets.right_arrow} alt={""} className={"w-3 mt-[2px]"} />
+        <Image
+          src={
+            isDarkMode ? assets.right_arrow_bold_dark : assets.right_arrow_bold
+          }
+          alt={""}
+          className={"w-3 mt-[2px]"}
+        />
       </div>
     </div>
   );

@@ -13,19 +13,21 @@ export default function Services({ isDarkMode }: { isDarkMode: boolean }) {
         {serviceData.map(({ icon, title, description, link }, index) => (
           <li
             key={index}
-            className={
-              "border-[0.5px] border-gray-400 rounded-xl px-8 py-12 hover:bg-lightHover hover:shadow-black hover:-translate-y-1 duration-500"
-            }
+            className={`border-[0.5px] border-gray-400 rounded-xl px-8 py-12 ${isDarkMode ? "hover:bg-darkHover hover:shadow-white" : "hover:bg-lightHover hover:shadow-black"} hover:-translate-y-1 duration-500`}
           >
             <Image src={icon} alt={title} className={"w-10"} />
-            <h3 className={"my-3 font-semibold text-gray-700"}>{title}</h3>
-            <p className={"text-gray-600 text-sm"}>{description}</p>
+            <h3 className={"my-3 font-semibold text-gray-700 dark:text-white"}>
+              {title}
+            </h3>
+            <p className={"text-gray-600 text-sm dark:text-white/80"}>
+              {description}
+            </p>
             <a href={link} className={"flex items-center gap-2 mt-6"}>
               read more{" "}
               <Image
-                src={assets.right_arrow}
+                src={isDarkMode ? assets.right_arrow_white : assets.right_arrow}
                 alt={"right_arrow"}
-                className={"w-3"}
+                className={"w-3 mt-1"}
               />
             </a>
           </li>

@@ -5,15 +5,27 @@ export default function Footer({ isDarkMode }: { isDarkMode: boolean }) {
   return (
     <div className={"mt-20 text-gray-600"}>
       <div className={"text-center"}>
-        <Image src={assets.logo} className={"w-36 mx-auto mb-2"} alt={"logo"} />
-        <div className={"flex items-center justify-center gap-2"}>
-          <Image src={assets.mail_icon} alt={""} className={"w-6"} />
+        <Image
+          src={isDarkMode ? assets.logo_dark : assets.logo}
+          className={"w-36 mx-auto mb-2"}
+          alt={"logo"}
+        />
+        <div
+          className={
+            "flex items-center justify-center gap-2 dark:text-white/90"
+          }
+        >
+          <Image
+            src={isDarkMode ? assets.mail_icon_dark : assets.mail_icon}
+            alt={""}
+            className={"w-6"}
+          />
           sn920647@gmail.com
         </div>
       </div>
       <div
         className={
-          "border-t border-gray-300 mx-[10%] mt-10 mb-20 py-4 flex flex-col sm:flex-row sm:justify-between"
+          "border-t border-gray-300 mx-[10%] mt-10 mb-20 py-4 flex flex-col sm:flex-row sm:justify-between dark:text-white/90"
         }
       >
         <p className={"text-center"}>ⓒ 2025 Chole Lee. All rights reserved.</p>
