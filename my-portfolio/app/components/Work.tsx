@@ -4,39 +4,45 @@ import Image from "next/image";
 export default function Work({ isDarkMode }: { isDarkMode: boolean }) {
   return (
     <div id={"work"} className={"w-full px-[12%] py-10 scroll-mt-20"}>
-      <h4 className={"text-center mb-2 text-lg font-Ovo"}>My portfolio</h4>
-      <h2 className={"text-center text-5xl font-Ovo"}>My latest work</h2>
+      <h2 className={"text-center text-5xl font-Ovo"}>My works</h2>
       <p
         className={
           "text-center max-w-2xl mx-auto mt-5 mb-10 font-Ovo text-gray-600 dark:text-white/80"
         }
       >
-        Explore the website I worked on.
+        Explore the projects I worked on.
       </p>
-      <div className={"grid grid-cols-auto gap-5 my-10"}>
+      <div className={"flex justify-center"}>
         {workData.map(({ title, description, bgImage }, index) => (
           <div
             key={index}
-            className={
-              "aspect-square rounded-xl bg-cover bg-center bg-no-repeat relative cursor-pointer group"
-            }
-            style={{ backgroundImage: `url(${bgImage})` }}
+            className={`w-[80%] rounded-xl bg-white p-10 relative`}
           >
             <div
+              className={`absolute inset-0 z-10 ${isDarkMode ? "hover:bg-darkHover hover:opacity-30" : "hover:bg-gray-600 hover:opacity-30"}`}
+            ></div>
+            <div
               className={
-                "bg-white w-11/12 flex justify-between items-center rounded-md absolute bottom-5 left-1/2 -translate-x-1/2 px-5 py-3 group-hover:bottom-7 duration-500"
+                "aspect-video rounded-xl bg-contain bg-center bg-no-repeat cursor-pointer group w-full"
               }
+              style={{ backgroundImage: `url(${bgImage})` }}
             >
-              <div>
-                <h2 className={"font-semibold dark:text-black"}>{title}</h2>
-                <p className={"text-sm text-gray-600"}>{description}</p>
-              </div>
               <div
                 className={
-                  "border border-black rounded-full w-9 aspect-square flex justify-center items-center shadow-[2px_2px_0_#000] group-hover:bg-lime-300 transition"
+                  "bg-white w-11/12 flex justify-between items-center rounded-md absolute bottom-5 left-1/2 -translate-x-1/2 px-5 py-3 group-hover:bottom-7 duration-500"
                 }
               >
-                <Image src={assets.send_icon} alt={""} className={"w-5"} />
+                <div>
+                  <h2 className={"font-semibold dark:text-black"}>{title}</h2>
+                  <p className={"text-sm text-gray-600"}>{description}</p>
+                </div>
+                <div
+                  className={
+                    "border border-black rounded-full w-9 aspect-square flex justify-center items-center shadow-[2px_2px_0_#000] group-hover:bg-lime-300 transition"
+                  }
+                >
+                  <Image src={assets.send_icon} alt={""} className={"w-5"} />
+                </div>
               </div>
             </div>
           </div>
@@ -55,6 +61,28 @@ export default function Work({ isDarkMode }: { isDarkMode: boolean }) {
           alt={""}
           className={"w-3 mt-[2px]"}
         />
+      </div>
+      <div
+        style={{
+          position: "relative",
+          paddingBottom: "56.14583333333334%",
+          height: 0,
+        }}
+      >
+        <iframe
+          src="https://www.loom.com/embed/5c74d03c3aa84883930a1bdb427a704d?sid=10a0ed0e-2486-4834-8b7d-53d9128be059"
+          // frameBorder="0"
+          // webkitallowfullscreen
+          // mozallowfullscreen
+          // allowFullScreen
+          style={{
+            position: "absolute",
+            top: 0,
+            left: 0,
+            width: "20%",
+            height: "20%",
+          }}
+        ></iframe>
       </div>
     </div>
   );

@@ -20,7 +20,7 @@ export default function Header({ isDarkMode }: { isDarkMode: boolean }) {
         }}
       >
         <Image
-          src={assets.profile_img}
+          src={assets.ey_circle}
           alt={"profile_img"}
           className={"rounded-full w-32"}
         />
@@ -31,28 +31,33 @@ export default function Header({ isDarkMode }: { isDarkMode: boolean }) {
         transition={{ duration: 0.6, delay: 0.3 }}
         className={"flex items-center gap-2 text-xl md:text-2xl mb-3"}
       >
-        <h3 className={"font-Ovo"}>Chloe Lee</h3>
         <Image
           src={assets.hand_icon}
           alt={"hand_icon"}
-          className={"w-6 mb-1"}
+          className={"w-6 mt-1"}
         />
       </motion.div>
-      <motion.h1
+      <motion.h3
         initial={{ y: -30, opacity: 0 }}
         whileInView={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.8, delay: 0.5 }}
-        className={"text-3xl sm:text-6xl lg:text-[66px] font-Ovo"}
+        className={"text-3xl sm:text-6xl lg:text-[40px] font-Ovo"}
       >
-        frontend engineer
-      </motion.h1>
+        Chloe Lee, Frontend engineer
+      </motion.h3>
       <motion.p
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         transition={{ duration: 0.6, delay: 0.7 }}
         className={"max-w-2xl mx-auto font-Ovo"}
       >
-        Hello World
+        Hello World, I'm Chloe having 3 years of frontend engineering
+        experience.
+        <br />
+        I've been using Next.js mostly with TypeScript and sometimes Vue.js.
+        <br />
+        I'm a developer who approaches UX with empathy, responsibility, and
+        depth for users.
       </motion.p>
       <div className={"flex flex-col sm:flex-row gap-4 mt-4"}>
         <motion.a
