@@ -71,7 +71,6 @@ export default function About({ isDarkMode }: { isDarkMode: boolean }) {
                 }}
                 onHoverEnd={(event) => {
                   if (listRefs.current[index] != null) {
-                    console.log("hover end");
                     listRefs.current[index].style.transform = "translateY(0px)";
                     listRefs.current[index].style.transition = "transform 0.5s";
                   }

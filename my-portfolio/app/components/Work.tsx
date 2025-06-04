@@ -19,29 +19,28 @@ export default function Work({ isDarkMode }: { isDarkMode: boolean }) {
             className={`w-[80%] rounded-xl bg-white p-10 relative`}
           >
             <div
-              className={`absolute inset-0 z-10 ${isDarkMode ? "hover:bg-darkHover hover:opacity-30" : "hover:bg-gray-600 hover:opacity-30"}`}
-            ></div>
-            <div
-              className={
-                "aspect-video rounded-xl bg-contain bg-center bg-no-repeat cursor-pointer group w-full"
-              }
+              className={`aspect-video rounded-xl bg-contain bg-center bg-no-repeat cursor-pointer group w-full`}
               style={{ backgroundImage: `url(${bgImage})` }}
             >
               <div
-                className={
-                  "bg-white w-11/12 flex justify-between items-center rounded-md absolute bottom-5 left-1/2 -translate-x-1/2 px-5 py-3 group-hover:bottom-7 duration-500"
-                }
+                className={`absolute inset-0 flex items-center justify-center ${isDarkMode ? "hover:bg-darkHover hover:bg-opacity-30" : "hover:bg-gray-600 hover:bg-opacity-30"} group-hover:visible invisible`}
               >
-                <div>
-                  <h2 className={"font-semibold dark:text-black"}>{title}</h2>
-                  <p className={"text-sm text-gray-600"}>{description}</p>
-                </div>
                 <div
-                  className={
-                    "border border-black rounded-full w-9 aspect-square flex justify-center items-center shadow-[2px_2px_0_#000] group-hover:bg-lime-300 transition"
-                  }
+                  className={`absolute bg-white w-[40%] flex justify-between items-center rounded-md px-5 py-3 group-hover:-translate-y-5 group-hover:duration-500`}
                 >
-                  <Image src={assets.send_icon} alt={""} className={"w-5"} />
+                  <div>
+                    <h2 className={"font-semibold dark:text-black"}>
+                      go to website
+                    </h2>
+                    <p className={"text-sm text-gray-600"}>{description}</p>
+                  </div>
+                  <div
+                    className={
+                      "border border-black rounded-full w-9 aspect-square flex justify-center items-center shadow-[2px_2px_0_#000] group-hover:bg-lime-300 transition"
+                    }
+                  >
+                    <Image src={assets.send_icon} alt={""} className={"w-5"} />
+                  </div>
                 </div>
               </div>
             </div>
