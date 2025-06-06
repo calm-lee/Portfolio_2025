@@ -16,14 +16,14 @@ export default function Work({ isDarkMode }: { isDarkMode: boolean }) {
         {workData.map(({ title, description, bgImage }, index) => (
           <div
             key={index}
-            className={`w-[80%] rounded-xl bg-white p-10 relative`}
+            className={`w-[80%] rounded-xl bg-white p-7 relative border-[0.5px] border-gray-300`}
           >
             <div
               className={`aspect-video rounded-xl bg-contain bg-center bg-no-repeat cursor-pointer group w-full`}
               style={{ backgroundImage: `url(${bgImage})` }}
             >
               <div
-                className={`absolute inset-0 flex items-center justify-center ${isDarkMode ? "hover:bg-darkHover hover:bg-opacity-30" : "hover:bg-gray-600 hover:bg-opacity-30"} group-hover:visible invisible`}
+                className={`absolute inset-0 rounded-xl flex items-center justify-center ${isDarkMode ? "hover:bg-darkHover hover:bg-opacity-30" : "hover:bg-gray-600 hover:bg-opacity-30"} group-hover:visible invisible`}
               >
                 <div
                   className={`absolute bg-white w-[40%] flex justify-between items-center rounded-md px-5 py-3 group-hover:-translate-y-5 group-hover:duration-500`}

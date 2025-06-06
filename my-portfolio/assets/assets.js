@@ -108,29 +108,32 @@ export const workData = [
 
 export const serviceData = [
   {
-    icon: assets.web_icon,
-    title: "Web design",
+    icon: "/tourvis_og.jpg",
+    title: "Tourvis",
     description: "Web development is the process of building, programming...",
     link: "",
   },
   {
-    icon: assets.mobile_icon,
-    title: "Mobile app",
+    icon: "/privia_og.jpeg",
+    title: "Privia",
     description:
       "Mobile app development involves creating software for mobile devices...",
     link: "",
   },
+];
+
+export const workDetailData = [
   {
-    icon: assets.ui_icon,
-    title: "UI/UX design",
-    description:
-      "UI/UX design focuses on creating a seamless user experience...",
+    icon: "/tourvis_og.jpg",
+    title: "Tourvis",
+    description: "Web development is the process of building, programming...",
     link: "",
   },
   {
-    icon: assets.graphics_icon,
-    title: "Graphics design",
-    description: "Creative design solutions to enhance visual communication...",
+    icon: "/privia_og.jpeg",
+    title: "Privia",
+    description:
+      "Mobile app development involves creating software for mobile devices...",
     link: "",
   },
 ];
