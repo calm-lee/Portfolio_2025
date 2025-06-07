@@ -121,16 +121,7 @@ export const serviceData = [
     description:
       "Full FE ownership of Ticket category" +
       "<br /><br />" +
-      "<b>Key Contributions</b>" +
-      "<br />" +
-      "· Developed PC & Mobile web page with responsive design." +
-      "<br />" +
-      "· Improved UX with convenient features:" +
-      "<br />" +
-      "<div style='margin-left: 1em'>– Displayed PDF voucher in modal, connected address with Google Maps, added price view on calendar,<br />– Built review section with ratings and tags, toast-style error messages etc.</div>" +
-      "· Implemented hybrid rendering (SSR + CSR) alongside React Server Components to improve SEO and enhance page load speed." +
-      "<br />" +
-      "· Actively used React Hooks to improve code reusability and maintainability across components.",
+      "Built responsive pages and improved UX with modal voucher, Google Maps, and calendar pricing features.",
     link: "",
     tools: [
       assets.nextjs,
@@ -161,7 +152,18 @@ export const workDetailData = [
   {
     icon: "/tourvis_og.jpg",
     title: "Tourvis",
-    description: "Web development is the process of building, programming...",
+    description:
+      "<b>Key Contributions</b>" +
+      "<br />" +
+      "· Developed PC & Mobile web page with responsive design." +
+      "<br />" +
+      "· Improved UX with convenient features:" +
+      "<br />" +
+      "<div style='margin-left: 1em'>– Displayed PDF voucher in modal, integrated Google Maps, added price view on calendar,<br />– Built review section with ratings and tags, toast-style error messages.</div>" +
+      "<br />" +
+      "· Implemented hybrid rendering (SSR + CSR) alongside React Server Components to improve SEO and enhance page load speed." +
+      "<br />" +
+      "· Actively used React Hooks to improve code reusability and maintainability across components.",
     link: "",
   },
   {

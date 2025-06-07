@@ -33,13 +33,13 @@ export default function Services({ isDarkMode }: { isDarkMode: boolean }) {
           </p>
         </div>
         <ul
-          className={" w-[80%] grid grid-cols-auto md:grid-cols-2 gap-14 my-10"}
+          className={"w-[80%] grid grid-cols-auto md:grid-cols-2 gap-14 my-10"}
         >
           {serviceData.map(
             ({ icon, title, description, link, tools }, index) => (
               <li
                 key={index}
-                className={`border-[0.5px] border-gray-400 rounded-xl ${isDarkMode ? "hover:bg-darkHover hover:shadow-white" : "hover:bg-lightHover hover:shadow-black"} hover:-translate-y-1 duration-500`}
+                className={`border-[0.5px] border-gray-400 rounded-xl ${isDarkMode ? "hover:bg-darkHover hover:shadow-white" : "hover:bg-lightHover hover:shadow-black"} hover:-translate-y-1 duration-500 cursor-pointer`}
                 onClick={() => setModalValues(title)}
               >
                 <div className={"relative aspect-video"}>
@@ -62,7 +62,7 @@ export default function Services({ isDarkMode }: { isDarkMode: boolean }) {
                   <p
                     dangerouslySetInnerHTML={{ __html: description }}
                     className={
-                      "text-sm text-gray-600 dark:text-white/80 leading-loose"
+                      "pt-3 text-base text-gray-600 dark:text-white/80"
                     }
                   ></p>
                 </div>
@@ -86,7 +86,7 @@ export default function Services({ isDarkMode }: { isDarkMode: boolean }) {
       {modalContent && (
         <Modal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)}>
           <h1>{modalContent.title}</h1>
-          <p>{modalContent.description}</p>
+          <p dangerouslySetInnerHTML={{ __html: modalContent.description }} />
           <button onClick={() => setIsModalOpen(false)}></button>
         </Modal>
       )}
