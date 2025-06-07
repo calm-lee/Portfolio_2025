@@ -5,11 +5,15 @@ import edu_icon from "./edu-icon.png";
 import edu_icon_dark from "./edu-icon-dark.png";
 import project_icon from "./project-icon.png";
 import project_icon_dark from "./project-icon-dark.png";
+import nextjs from "./nextjs.svg";
+import aws from "./aws.svg";
+import bitbucket from "./bitbucket.svg";
+import jira from "./jira.svg";
+import swagger from "./swagger.svg";
+import vuejs from "./vuejs.svg";
 import vscode from "./vscode.png";
-import firebase from "./firebase.png";
 import figma from "./figma.png";
 import git from "./git.png";
-import mongodb from "./mongodb.png";
 import right_arrow_white from "./right-arrow-white.png";
 import logo from "./logo.png";
 import logo_dark from "./logo_dark.png";
@@ -49,10 +53,14 @@ export const assets = {
   project_icon,
   project_icon_dark,
   vscode,
-  firebase,
+  nextjs,
+  aws,
+  bitbucket,
+  jira,
+  swagger,
+  vuejs,
   figma,
   git,
-  mongodb,
   right_arrow_white,
   logo,
   logo_dark,
@@ -110,8 +118,27 @@ export const serviceData = [
   {
     icon: "/tourvis_og.jpg",
     title: "Tourvis",
-    description: "Web development is the process of building, programming...",
+    description:
+      "Full FE ownership of Ticket category" +
+      "<br /><br />" +
+      "<b>Key Contributions</b>" +
+      "<br />" +
+      "· Developed PC & Mobile web page with responsive design." +
+      "<br />" +
+      "· Improved UX with convenient features:" +
+      "<br />" +
+      "<div style='margin-left: 1em'>– Displayed PDF voucher in modal, connected address with Google Maps, added price view on calendar,<br />– Built review section with ratings and tags, toast-style error messages etc.</div>" +
+      "· Implemented hybrid rendering (SSR + CSR) alongside React Server Components to improve SEO and enhance page load speed." +
+      "<br />" +
+      "· Actively used React Hooks to improve code reusability and maintainability across components.",
     link: "",
+    tools: [
+      assets.nextjs,
+      assets.aws,
+      assets.bitbucket,
+      assets.jira,
+      assets.swagger,
+    ],
   },
   {
     icon: "/privia_og.jpeg",
@@ -119,6 +146,14 @@ export const serviceData = [
     description:
       "Mobile app development involves creating software for mobile devices...",
     link: "",
+    tools: [
+      assets.vuejs,
+      assets.nextjs,
+      assets.aws,
+      assets.bitbucket,
+      assets.jira,
+      assets.swagger,
+    ],
   },
 ];
 
@@ -160,9 +195,11 @@ export const infoList = [
 ];
 
 export const toolsData = [
-  assets.vscode,
-  assets.firebase,
-  assets.mongodb,
-  assets.figma,
+  assets.nextjs,
+  assets.vuejs,
+  assets.aws,
+  assets.bitbucket,
+  assets.jira,
+  assets.swagger,
   assets.git,
 ];

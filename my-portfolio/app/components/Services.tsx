@@ -19,58 +19,68 @@ export default function Services({ isDarkMode }: { isDarkMode: boolean }) {
 
   return (
     <>
-      <div id={"services"} className={"w-full px-[12%] py-10 scroll-mt-20"}>
-        <h4 className={"text-center mb-2 text-lg font-Ovo"}>What I offer</h4>
-        <h2 className={"text-center text-5xl font-Ovo"}>My Services</h2>
-        <p className={"text-center max-w-2xl mx-auto mt-5 mb-10 font-Ovo"}>
-          Those are my services that I offer.
-        </p>
+      <div
+        id={"services"}
+        className={
+          "w-full px-[12%] py-10 scroll-mt-20 flex flex-col items-center"
+        }
+      >
+        <div>
+          <h4 className={"text-center mb-2 text-lg font-Ovo"}>What I offer</h4>
+          <h2 className={"text-center text-5xl font-Ovo"}>My Services</h2>
+          <p className={"text-center max-w-2xl mx-auto mt-5 mb-10 font-Ovo"}>
+            Those are my services that I offer.
+          </p>
+        </div>
         <ul
-          className={
-            "grid grid-cols-auto md:grid-cols-2 gap-16 my-10 justify-center"
-          }
+          className={" w-[80%] grid grid-cols-auto md:grid-cols-2 gap-14 my-10"}
         >
-          {serviceData.map(({ icon, title, description, link }, index) => (
-            <li
-              key={index}
-              className={`border-[0.5px] border-gray-400 rounded-xl ${isDarkMode ? "hover:bg-darkHover hover:shadow-white" : "hover:bg-lightHover hover:shadow-black"} hover:-translate-y-1 duration-500`}
-              onClick={() => setModalValues(title)}
-            >
-              <div className={"relative aspect-video"}>
-                <img
-                  src={icon}
-                  alt={title}
-                  className={
-                    "absolute rounded-t-xl object-cover w-full h-full border-b-[0.5px] border-gray-400"
-                  }
-                />
-              </div>
-              <div className={"relative aspect-video pt-1 pb-10 px-5"}>
-                <h1
-                  className={
-                    "text-2xl my-3 font-semibold text-gray-700 dark:text-white"
-                  }
-                >
-                  {title}
-                </h1>
-                <p className={"text-base text-gray-600 dark:text-white/80"}>
-                  {description}
-                </p>
-              </div>
-              <ul className={"flex flex-row gap-3 sm:gap-5 p-5"}>
-                {toolsData.map((tool, index) => (
-                  <li
-                    key={index}
+          {serviceData.map(
+            ({ icon, title, description, link, tools }, index) => (
+              <li
+                key={index}
+                className={`border-[0.5px] border-gray-400 rounded-xl ${isDarkMode ? "hover:bg-darkHover hover:shadow-white" : "hover:bg-lightHover hover:shadow-black"} hover:-translate-y-1 duration-500`}
+                onClick={() => setModalValues(title)}
+              >
+                <div className={"relative aspect-video"}>
+                  <img
+                    src={icon}
+                    alt={title}
                     className={
-                      "flex items-center justify-center w-12 sm:w-14 aspect-square border-[0.5px] border-gray-400 rounded-xl"
+                      "absolute rounded-t-xl object-cover w-full h-full border-b-[0.5px] border-gray-400"
+                    }
+                  />
+                </div>
+                <div className={"relative aspect-video pt-1 pb-10 px-5"}>
+                  <h1
+                    className={
+                      "text-2xl my-3 font-semibold text-gray-700 dark:text-white"
                     }
                   >
-                    <Image src={tool} alt={"Tool"} className={"w-5 sm:w-7"} />
-                  </li>
-                ))}
-              </ul>
-            </li>
-          ))}
+                    {title}
+                  </h1>
+                  <p
+                    dangerouslySetInnerHTML={{ __html: description }}
+                    className={
+                      "text-sm text-gray-600 dark:text-white/80 leading-loose"
+                    }
+                  ></p>
+                </div>
+                <ul className={"flex flex-row gap-3 sm:gap-5 p-5"}>
+                  {tools.map((tool, index) => (
+                    <li
+                      key={index}
+                      className={
+                        "flex items-center justify-center w-12 sm:w-14 aspect-square border-[0.5px] border-gray-400 rounded-xl"
+                      }
+                    >
+                      <Image src={tool} alt={"Tool"} className={"w-5 sm:w-7"} />
+                    </li>
+                  ))}
+                </ul>
+              </li>
+            ),
+          )}
         </ul>
       </div>
       {modalContent && (
