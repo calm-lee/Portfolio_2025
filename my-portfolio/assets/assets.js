@@ -118,6 +118,7 @@ export const serviceData = [
   {
     icon: "/tourvis_og.jpg",
     title: "Tourvis",
+    title2: "Travel Agency Website",
     description:
       "Full FE ownership of Ticket category" +
       "<br /><br />" +
@@ -134,8 +135,11 @@ export const serviceData = [
   {
     icon: "/privia_og.jpeg",
     title: "Privia",
+    title2: "Travel Agency Website",
     description:
-      "Mobile app development involves creating software for mobile devices...",
+      "Full FE ownership of Ticket category" +
+      "<br /><br />" +
+      "Enhanced UX with real-time form validation and personalised discount display via pricing filters.",
     link: "",
     tools: [
       assets.vuejs,
@@ -164,14 +168,18 @@ export const workDetailData = [
       "· Implemented hybrid rendering (SSR + CSR) alongside React Server Components to improve SEO and enhance page load speed." +
       "<br />" +
       "· Actively used React Hooks to improve code reusability and maintainability across components.",
-    link: "",
+    framework: "Next.js",
+    screenShot: "",
+    link: "https://tourvis.com/activity",
   },
   {
     icon: "/privia_og.jpeg",
     title: "Privia",
     description:
       "Mobile app development involves creating software for mobile devices...",
-    link: "",
+    framework: "Vue.js" + "<br />" + "Next.js",
+    screenShot: "",
+    link: "https://activity.priviatravel.com",
   },
 ];
 

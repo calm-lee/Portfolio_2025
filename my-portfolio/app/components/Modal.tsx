@@ -29,7 +29,7 @@ export default function Modal({ isOpen, onClose, children }: ModalProps) {
       onClick={onClose}
     >
       <div
-        className="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-lg w-full max-w-md"
+        className="bg-white dark:bg-gray-800 rounded-xl shadow-lg w-full max-w-xl"
         onClick={(e) => e.stopPropagation()} // 모달 내부 클릭은 닫히지 않도록
       >
         {children}

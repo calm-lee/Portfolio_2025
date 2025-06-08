@@ -32,52 +32,61 @@ export default function Services({ isDarkMode }: { isDarkMode: boolean }) {
             Those are my services that I offer.
           </p>
         </div>
-        <ul
-          className={"w-[80%] grid grid-cols-auto md:grid-cols-2 gap-14 my-10"}
-        >
+        <ul className={"w-[80%] grid grid-cols-1 sm:grid-cols-2 gap-14 my-10"}>
           {serviceData.map(
-            ({ icon, title, description, link, tools }, index) => (
+            ({ icon, title, title2, description, link, tools }, index) => (
               <li
                 key={index}
-                className={`border-[0.5px] border-gray-400 rounded-xl ${isDarkMode ? "hover:bg-darkHover hover:shadow-white" : "hover:bg-lightHover hover:shadow-black"} hover:-translate-y-1 duration-500 cursor-pointer`}
+                className={`relative flex-row sm:aspect-[3/4] border-[0.5px] border-gray-400 rounded-xl ${isDarkMode ? "hover:bg-darkHover hover:shadow-white" : "hover:bg-lightHover hover:shadow-black"} hover:-translate-y-1 duration-500 cursor-pointer`}
                 onClick={() => setModalValues(title)}
               >
-                <div className={"relative aspect-video"}>
+                <div
+                  className={
+                    "relative w-full sm:h-[40%] aspect-video border-b-[0.5px] border-gray-400"
+                  }
+                >
                   <img
                     src={icon}
                     alt={title}
                     className={
-                      "absolute rounded-t-xl object-cover w-full h-full border-b-[0.5px] border-gray-400"
+                      "w-full h-full rounded-t-xl border-b-[0.5px] object-cover"
                     }
                   />
                 </div>
-                <div className={"relative aspect-video pt-1 pb-10 px-5"}>
+                <div className={"sm:h-[45%] p-5 overflow-auto"}>
                   <h1
                     className={
-                      "text-2xl my-3 font-semibold text-gray-700 dark:text-white"
+                      "text-2xl font-semibold text-gray-700 dark:text-white"
                     }
                   >
                     {title}
                   </h1>
+                  <h3 className={"text-[14px] text-gray-400"}>{title2}</h3>
                   <p
                     dangerouslySetInnerHTML={{ __html: description }}
                     className={
-                      "pt-3 text-base text-gray-600 dark:text-white/80"
+                      "pt-3 text-sm lg:text-[16px] text-gray-600 dark:text-white/80"
                     }
                   ></p>
                 </div>
-                <ul className={"flex flex-row gap-3 sm:gap-5 p-5"}>
-                  {tools.map((tool, index) => (
-                    <li
-                      key={index}
-                      className={
-                        "flex items-center justify-center w-12 sm:w-14 aspect-square border-[0.5px] border-gray-400 rounded-xl"
-                      }
-                    >
-                      <Image src={tool} alt={"Tool"} className={"w-5 sm:w-7"} />
-                    </li>
-                  ))}
-                </ul>
+                <div className={"sm:h-[15%]"}>
+                  <ul className={"relative flex flex-row gap-3 m-5"}>
+                    {tools.map((tool, index) => (
+                      <li
+                        key={index}
+                        className={
+                          "flex items-center justify-center w-10 sm:w-12 aspect-square border-[0.5px] border-gray-400 rounded-xl"
+                        }
+                      >
+                        <Image
+                          src={tool}
+                          alt={"Tool"}
+                          className={"w-4 sm:w-7"}
+                        />
+                      </li>
+                    ))}
+                  </ul>
+                </div>
               </li>
             ),
           )}
@@ -85,9 +94,60 @@ export default function Services({ isDarkMode }: { isDarkMode: boolean }) {
       </div>
       {modalContent && (
         <Modal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)}>
-          <h1>{modalContent.title}</h1>
-          <p dangerouslySetInnerHTML={{ __html: modalContent.description }} />
-          <button onClick={() => setIsModalOpen(false)}></button>
+          <div className={"flex flex-col text-base"}>
+            <section className={"p-5 flex flex-row justify-between"}>
+              <h1 className={"text-xl font-semibold"}>{modalContent.title}</h1>
+              <button onClick={() => setIsModalOpen(false)}>X</button>
+            </section>
+            <section className={"p-5 flex flex-col gap-5"}>
+              <section className="grid grid-cols-3">
+                <div>
+                  <h6 className={"font-bold"}>Type</h6>
+                  <div>
+                    <p>PC</p>
+                    <p>Mobile</p>
+                    <p>Responsive</p>
+                  </div>
+                </div>
+                <div>
+                  <h6 className={"font-bold"}>FrameWork</h6>
+                  <div>
+                    <p
+                      dangerouslySetInnerHTML={{
+                        __html: modalContent.framework,
+                      }}
+                    />
+                  </div>
+                </div>
+                <div>
+                  <h6 className={"font-bold"}>Library</h6>
+                  <div>
+                    <p></p>
+                  </div>
+                </div>
+              </section>
+              <section className="overflow-auto">
+                <p
+                  dangerouslySetInnerHTML={{ __html: modalContent.description }}
+                />
+              </section>
+              <section className="screenshot">
+                <h6 className={"font-bold"}>Screenshots</h6>
+                <div className="swiper swiper-initialized swiper-horizontal">
+                  <div className="swiper-wrapper"></div>
+                </div>
+              </section>
+            </section>
+            <section className={"p-5"}>
+              <span
+                className={"w-full flex items-center justify-center font-bold"}
+              >
+                <a href={modalContent.link} target={"_blank"}>
+                  Go to Website
+                </a>
+              </span>
+            </section>
+          </div>
         </Modal>
       )}
     </>
