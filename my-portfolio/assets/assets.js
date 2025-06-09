@@ -39,6 +39,8 @@ import right_arrow from "./right-arrow.png";
 import send_icon from "./send-icon.png";
 import right_arrow_bold from "./right-arrow-bold.png";
 import right_arrow_bold_dark from "./right-arrow-bold-dark.png";
+import swiper_left_arrow from "./swiper-left-arrow-icon.svg";
+import swiper_right_arrow from "./swiper-right-arrow-icon.svg";
 import blog_logo from "./blog-logo.png";
 import github_logo from "./github-logo.svg";
 import linkedIn_logo from "./linkedIn-logo.png";
@@ -83,6 +85,8 @@ export const assets = {
   ui_icon,
   graphics_icon,
   right_arrow,
+  swiper_left_arrow,
+  swiper_right_arrow,
   send_icon,
   right_arrow_bold,
   right_arrow_bold_dark,
@@ -169,7 +173,18 @@ export const workDetailData = [
       "<br />" +
       "· Actively used React Hooks to improve code reusability and maintainability across components.",
     framework: "Next.js",
-    screenShot: "",
+    screenShots: [
+      "https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2Fcsv6qg%2FbtsOug7JuDG%2FrJ8stNjd5kOIJQuzSMmmA1%2Fimg.png",
+      "https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FbpM9pC%2FbtsOt1iJZX9%2FY1L8t94hsBrPrM1Pfk4iGk%2Fimg.png",
+      "https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FbGE0cE%2FbtsOuymPNNX%2FhBGQNTr7PCE2r6bOOcQqA0%2Fimg.png",
+      "https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FblTVxA%2FbtsOthGsOXS%2FYiNKkZpBpg9G9POeGeHRV1%2Fimg.png",
+      "https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FTQ0te%2FbtsOu9zVbcC%2FAp7lFU1S8JE0lJMYwKHsY1%2Fimg.png",
+      "https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FbPgCkR%2FbtsOsBk54QA%2FX1cKFaOsxKkLGBnfnLcCp1%2Fimg.png",
+      "https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FclEQUM%2FbtsOtur0YnH%2FTj7L3EojEZvMBzhXqj2cZk%2Fimg.png",
+      "https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FFbaSX%2FbtsOuyNSVcG%2FxcAdkxKfUvU2185pSYpUc0%2Fimg.png",
+      "https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FbZ38rZ%2FbtsOu97K1LF%2FxQ9Yx4C4imB6YHA12TuI50%2Fimg.png",
+      "https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FqAFTi%2FbtsOujXKsiw%2FWiFn5sFULHD9Hep3KrICiK%2Fimg.png",
+    ],
     link: "https://tourvis.com/activity",
   },
   {
@@ -178,7 +193,11 @@ export const workDetailData = [
     description:
       "Mobile app development involves creating software for mobile devices...",
     framework: "Vue.js" + "<br />" + "Next.js",
-    screenShot: "",
+    screenShots: [
+      "https://thumb.tidesquare.com/tour/public/product/PRV3000000047/PRD3007959387/origin/20250520083938496_JRaWx.jpg?type=gallery",
+      "https://thumb.tidesquare.com/tour/public/product/PRV3000000047/PRD3007959387/origin/20250520083849012_ngn9u.jpg?type=gallery",
+      "https://thumb.tidesquare.com/tour/public/product/PRV3000000047/PRD3007959387/origin/20250520083859135_NnqPf.jpg?type=gallery",
+    ],
     link: "https://activity.priviatravel.com",
   },
 ];

@@ -1,0 +1,103 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+*{
+  font-family: Outfit;
+}
+
+
+.custom-scroll::-webkit-scrollbar {
+  width: 8px;
+}
+
+.custom-scroll::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.custom-scroll::-webkit-scrollbar-thumb {
+  background-color: #D1D5DB;
+  border-radius: 10px;
+  border: 2px solid transparent;
+  background-clip: content-box;
+}
+
+.swiper-wrapper
+{
+  position: relative;
+  z-index: 1;
+
+  display: flex;
+
+  box-sizing: content-box;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+
+  transition-property: transform;
+}
+
+.swiper-custom {
+  position: absolute;
+}
+
+.swiper-custom .swiper-button
+{
+  position: absolute;
+  z-index: 1;
+  top: 50%;
+
+  display: flex;
+
+  width: 40px;
+  height: 40px;
+
+  cursor: pointer;
+  transition: opacity .5s;
+  transform: translateY(-50%);
+
+  opacity: .9;
+  border-radius: 100%;
+  background-color: #fff;
+  box-shadow: 0 3px 3px rgba(0, 0, 0, .1);
+
+  align-items: center;
+}
+.swiper-custom .swiper-button.swiper-button-disabled
+{
+  opacity: 0;
+}
+.swiper-custom .swiper-button.main-banner-prev
+{
+  left: -17px;
+}
+.swiper-custom .swiper-button.main-banner-prev::before
+{
+  transform: translateX(-1px);
+
+  background: url(https://cdns.tourvis.com/package/dist/images/svg/ico-arrow-left-big.svg) no-repeat center center/23% auto;
+}
+.swiper-custom .swiper-button.main-banner-next
+{
+  right: -17px;
+
+  justify-content: right;
+}
+.swiper-custom .swiper-button.main-banner-next::before
+{
+  transform: translateX(1px);
+
+  background: url(https://cdns.tourvis.com/package/dist/images/svg/ico-arrow-right-big.svg) no-repeat center center/23% auto;
+}
+.swiper-custom .swiper-button::before
+{
+  width: 100%;
+  height: 100%;
+
+  content: '';
+}
+
