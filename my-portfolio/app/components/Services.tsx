@@ -1,7 +1,9 @@
-import { serviceData, toolsData, workDetailData } from "@/assets/assets";
+import { serviceData, workDetailData } from "@/assets/assets";
 import Image from "next/image";
 import React, { useState } from "react";
 import Modal from "@/app/components/Modal";
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
 
 export default function Services({ isDarkMode }: { isDarkMode: boolean }) {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -94,12 +96,16 @@ export default function Services({ isDarkMode }: { isDarkMode: boolean }) {
       </div>
       {modalContent && (
         <Modal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)}>
-          <div className={"flex flex-col text-base"}>
-            <section className={"p-5 flex flex-row justify-between"}>
+          <div className={"flex flex-col text-base p-3 h-full"}>
+            <section className={"shrink-0 p-5 flex flex-row justify-between"}>
               <h1 className={"text-xl font-semibold"}>{modalContent.title}</h1>
               <button onClick={() => setIsModalOpen(false)}>X</button>
             </section>
-            <section className={"p-5 flex flex-col gap-5"}>
+            <section
+              className={
+                "custom-scroll flex-1 p-5 flex flex-col gap-5 overflow-y-scroll"
+              }
+            >
               <section className="grid grid-cols-3">
                 <div>
                   <h6 className={"font-bold"}>Type</h6>
@@ -126,19 +132,38 @@ export default function Services({ isDarkMode }: { isDarkMode: boolean }) {
                   </div>
                 </div>
               </section>
-              <section className="overflow-auto">
+              <section>
                 <p
                   dangerouslySetInnerHTML={{ __html: modalContent.description }}
                 />
               </section>
               <section className="screenshot">
                 <h6 className={"font-bold"}>Screenshots</h6>
-                <div className="swiper swiper-initialized swiper-horizontal">
-                  <div className="swiper-wrapper"></div>
+                <div className={"relative mt-5"}>
+                  <Swiper
+                    slidesPerView={1}
+                    className={
+                      "border-[0.5px] border-gray-200 shadow-lg shadow-gray-300 rounded-lg"
+                    }
+                  >
+                    {modalContent.screenShots.map((screenshot, index) => (
+                      <SwiperSlide key={index}>
+                        <img
+                          src={screenshot}
+                          alt={screenshot}
+                          className={"bg-gray-200"}
+                        />
+                      </SwiperSlide>
+                    ))}
+                  </Swiper>
+                  <div className="swiper-custom w-full absolute inset-0 pointer-events-none">
+                    <div className="swiper-button main-banner-next"></div>
+                    <div className="swiper-button main-banner-prev"></div>
+                  </div>
                 </div>
               </section>
             </section>
-            <section className={"p-5"}>
+            <section className={"shrink-0 p-5"}>
               <span
                 className={"w-full flex items-center justify-center font-bold"}
               >

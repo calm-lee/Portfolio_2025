@@ -1,6 +1,9 @@
 import type { Metadata } from "next";
 import { Outfit, Ovo } from "next/font/google";
-import "./globals.css";
+import "./styles/globals.css";
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
 
 const outfit = Outfit({
   subsets: ["latin"],
