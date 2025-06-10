@@ -1,9 +1,10 @@
 import { serviceData, workDetailData } from "@/assets/assets";
 import Image from "next/image";
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 import Modal from "@/app/components/Modal";
-import { Swiper, SwiperSlide } from "swiper/react";
+import { Swiper, SwiperRef, SwiperSlide } from "swiper/react";
 import "swiper/css";
+import { Autoplay, Navigation, Pagination } from "swiper/modules";
 
 export default function Services({ isDarkMode }: { isDarkMode: boolean }) {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -18,6 +19,7 @@ export default function Services({ isDarkMode }: { isDarkMode: boolean }) {
       setIsModalOpen(true);
     }
   };
+  const swiperRef = useRef<SwiperRef>(null);
 
   return (
     <>
@@ -141,7 +143,17 @@ export default function Services({ isDarkMode }: { isDarkMode: boolean }) {
                 <h6 className={"font-bold"}>Screenshots</h6>
                 <div className={"relative mt-5"}>
                   <Swiper
+                    ref={swiperRef}
+                    modules={[Navigation, Pagination, Autoplay]}
+                    navigation={{
+                      nextEl: ".main-banner-next",
+                      prevEl: ".main-banner-prev",
+                    }}
                     slidesPerView={1}
+                    autoplay={{
+                      delay: 2500,
+                      disableOnInteraction: false,
+                    }}
                     className={
                       "border-[0.5px] border-gray-200 shadow-lg shadow-gray-300 rounded-lg"
                     }
@@ -156,7 +168,7 @@ export default function Services({ isDarkMode }: { isDarkMode: boolean }) {
                       </SwiperSlide>
                     ))}
                   </Swiper>
-                  <div className="swiper-custom w-full absolute inset-0 pointer-events-none">
+                  <div className="swiper-custom w-full absolute inset-0">
                     <div className="swiper-button main-banner-next"></div>
                     <div className="swiper-button main-banner-prev"></div>
                   </div>
