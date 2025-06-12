@@ -210,9 +210,9 @@ export const workDetailData = [
       "https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FFbaSX%2FbtsOuyNSVcG%2FxcAdkxKfUvU2185pSYpUc0%2Fimg.png",
       "https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2F2r6VU%2FbtsOvagzeJv%2FCtmmoZzlJO7spbtXslyq7k%2Fimg.png",
       "https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FbZ38rZ%2FbtsOu97K1LF%2FxQ9Yx4C4imB6YHA12TuI50%2Fimg.png",
-      "https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FqAFTi%2FbtsOujXKsiw%2FWiFn5sFULHD9Hep3KrICiK%2Fimg.png",
     ],
     screenshots_mo: [
+      "https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FqAFTi%2FbtsOujXKsiw%2FWiFn5sFULHD9Hep3KrICiK%2Fimg.png",
       "https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FqAFTi%2FbtsOujXKsiw%2FWiFn5sFULHD9Hep3KrICiK%2Fimg.png",
       "https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2Fdd4K1p%2FbtsOuLe1cKa%2FEK2lSik2UyPhJFUOKKwpU1%2Fimg.png",
       "https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2F9DJx5%2FbtsOxNYe6eD%2FL4FBD9HMuZd9rdMDggHTC1%2Fimg.png",

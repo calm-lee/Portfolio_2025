@@ -11,7 +11,8 @@ export default function Services({ isDarkMode }: { isDarkMode: boolean }) {
   const [modalContent, setModalContent] = useState<
     (typeof workDetailData)[0] | null
   >(null);
-  const [tinySwiperIdx, setTinySwiperIdx] = useState(0);
+  const [tinySwiperPcIdx, setTinySwiperPcIdx] = useState(0);
+  const [tinySwiperMoIdx, setTinySwiperMoIdx] = useState(0);
 
   const setModalValues = (title: string) => {
     const detail = workDetailData.find((item) => item.title === title);
@@ -20,11 +21,15 @@ export default function Services({ isDarkMode }: { isDarkMode: boolean }) {
       setIsModalOpen(true);
     }
   };
-  const bigSwiperRef = useRef<SwiperRef>(null);
+  const bigSwiperPcRef = useRef<SwiperRef>(null);
+  const bigSwiperMoRef = useRef<SwiperRef>(null);
 
-  const changeBigSwiperIdx = (index: number) => {
-    if (bigSwiperRef.current) {
-      bigSwiperRef.current.swiper.slideTo(index);
+  const changeBigSwiperIdx = (index: number, type: string) => {
+    if (type === "pc" && bigSwiperPcRef.current) {
+      bigSwiperPcRef.current.swiper.slideTo(index);
+    }
+    if (type === "mo" && bigSwiperMoRef.current) {
+      bigSwiperMoRef.current.swiper.slideTo(index);
     }
   };
 
@@ -105,14 +110,14 @@ export default function Services({ isDarkMode }: { isDarkMode: boolean }) {
       </div>
       {modalContent && (
         <Modal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)}>
-          <div className={"flex flex-col text-base p-3 h-full"}>
+          <div className={"flex flex-col text-base pt-3 px-3 h-[90%]"}>
             <section className={"shrink-0 p-5 flex flex-row justify-between"}>
               <h1 className={"text-xl font-semibold"}>{modalContent.title}</h1>
               <button onClick={() => setIsModalOpen(false)}>X</button>
             </section>
             <section
               className={
-                "custom-scroll flex-1 p-5 flex flex-col gap-5 overflow-y-scroll"
+                "flex-1 custom-scroll p-5 flex flex-col gap-5 overflow-y-scroll"
               }
             >
               <section className="grid grid-cols-3">
@@ -148,9 +153,12 @@ export default function Services({ isDarkMode }: { isDarkMode: boolean }) {
               </section>
               <section className="screenshot">
                 <h6 className={"font-bold"}>Screenshots</h6>
-                <div className={"relative mt-5"}>
+                <p className={"mt-3 ml-1 font-semibold text-gray-600 text-sm"}>
+                  PC
+                </p>
+                <div className={"relative mt-3"}>
                   <Swiper
-                    ref={bigSwiperRef}
+                    ref={bigSwiperPcRef}
                     modules={[Navigation, Pagination]}
                     navigation={{
                       nextEl: ".main-banner-next",
@@ -161,8 +169,8 @@ export default function Services({ isDarkMode }: { isDarkMode: boolean }) {
                       "border-[0.5px] border-gray-200 shadow-lg shadow-gray-300 rounded-lg"
                     }
                     onSlideChange={() =>
-                      setTinySwiperIdx(
-                        bigSwiperRef.current?.swiper.activeIndex ?? 0,
+                      setTinySwiperPcIdx(
+                        bigSwiperPcRef.current?.swiper.activeIndex ?? 0,
                       )
                     }
                     loop={false}
@@ -181,7 +189,7 @@ export default function Services({ isDarkMode }: { isDarkMode: boolean }) {
                     <div className="swiper-button main-banner-next"></div>
                     <div className="swiper-button main-banner-prev"></div>
                   </div>
-                  <div className={"p-2  w-full"}>
+                  <div className={"p-2 w-full"}>
                     <Swiper
                       slidesPerView={modalContent.screenshots_pc.length}
                       spaceBetween={10}
@@ -191,10 +199,65 @@ export default function Services({ isDarkMode }: { isDarkMode: boolean }) {
                       {modalContent.screenshots_pc.map((screenshot, index) => (
                         <SwiperSlide key={index}>
                           <img
-                            onClick={() => changeBigSwiperIdx(index)}
+                            onClick={() => changeBigSwiperIdx(index, "pc")}
                             src={screenshot}
                             alt={screenshot}
-                            className={`bg-gray-200 ${tinySwiperIdx === index ? "border-[2px] border-amber-300" : ""}`}
+                            className={`bg-gray-200 ${tinySwiperPcIdx === index ? "border-[2px] border-amber-300" : ""}`}
+                          />
+                        </SwiperSlide>
+                      ))}
+                    </Swiper>
+                  </div>
+                </div>
+                <p className={"mt-7 ml-1  font-semibold text-gray-600 text-sm"}>
+                  MO
+                </p>
+                <div className={"relative mt-3"}>
+                  <Swiper
+                    ref={bigSwiperMoRef}
+                    modules={[Navigation, Pagination]}
+                    navigation={{
+                      nextEl: ".main-banner-next",
+                      prevEl: ".main-banner-prev",
+                    }}
+                    slidesPerView={1}
+                    className={
+                      "border-[0.5px] border-gray-200 shadow-lg shadow-gray-300 rounded-lg"
+                    }
+                    onSlideChange={() =>
+                      setTinySwiperMoIdx(
+                        bigSwiperMoRef.current?.swiper.activeIndex ?? 0,
+                      )
+                    }
+                    loop={false}
+                  >
+                    {modalContent.screenshots_mo.map((screenshot, index) => (
+                      <SwiperSlide key={index}>
+                        <img
+                          src={screenshot}
+                          alt={screenshot}
+                          className={"bg-gray-200"}
+                        />
+                      </SwiperSlide>
+                    ))}
+                  </Swiper>
+                  <div className="swiper-custom w-full absolute inset-0">
+                    <div className="swiper-button main-banner-next"></div>
+                    <div className="swiper-button main-banner-prev"></div>
+                  </div>
+                  <div className={"p-2  w-full"}>
+                    <Swiper
+                      slidesPerView={modalContent.screenshots_mo.length}
+                      className={""}
+                      loop={false}
+                    >
+                      {modalContent.screenshots_mo.map((screenshot, index) => (
+                        <SwiperSlide key={index}>
+                          <img
+                            onClick={() => changeBigSwiperIdx(index, "mo")}
+                            src={screenshot}
+                            alt={screenshot}
+                            className={`bg-transparent ${tinySwiperMoIdx === index ? "border-[2px] border-amber-300" : ""}`}
                           />
                         </SwiperSlide>
                       ))}
@@ -203,15 +266,15 @@ export default function Services({ isDarkMode }: { isDarkMode: boolean }) {
                 </div>
               </section>
             </section>
-            <section className={"shrink-0 p-5"}>
-              <span
-                className={"w-full flex items-center justify-center font-bold"}
-              >
-                <a href={modalContent.link} target={"_blank"}>
-                  Go to Website
-                </a>
-              </span>
-            </section>
+          </div>
+          <div
+            className={
+              "w-full h-[10%] flex items-center justify-center rounded-b-md bg-slate-700 text-white text-base"
+            }
+          >
+            <a href={modalContent.link} target={"_blank"}>
+              Go to Website
+            </a>
           </div>
         </Modal>
       )}
