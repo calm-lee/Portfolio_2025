@@ -124,31 +124,34 @@ export default function Services({ isDarkMode }: { isDarkMode: boolean }) {
                 <div>
                   <h6 className={"font-bold"}>Type</h6>
                   <div>
-                    <p>PC</p>
-                    <p>Mobile</p>
-                    <p>Responsive</p>
+                    <p>PC, Mobile (Responsive)</p>
                   </div>
                 </div>
                 <div>
-                  <h6 className={"font-bold"}>FrameWork</h6>
+                  <h6 className={"font-bold"}>Tech Stack</h6>
                   <div>
                     <p
                       dangerouslySetInnerHTML={{
-                        __html: modalContent.framework,
+                        __html: modalContent.techStack,
                       }}
                     />
                   </div>
                 </div>
                 <div>
-                  <h6 className={"font-bold"}>Library</h6>
+                  <h6 className={"font-bold"}>Collaboration Tools</h6>
                   <div>
-                    <p></p>
+                    <p
+                      dangerouslySetInnerHTML={{
+                        __html: modalContent.collaboTools,
+                      }}
+                    ></p>
                   </div>
                 </div>
               </section>
               <section>
                 <p
                   dangerouslySetInnerHTML={{ __html: modalContent.description }}
+                  className={"leading-loose"}
                 />
               </section>
               <section className="screenshot">
@@ -267,14 +270,17 @@ export default function Services({ isDarkMode }: { isDarkMode: boolean }) {
               </section>
             </section>
           </div>
-          <div
-            className={
-              "w-full h-[10%] flex items-center justify-center rounded-b-md bg-slate-700 text-white text-base"
-            }
-          >
-            <a href={modalContent.link} target={"_blank"}>
+          <div className={"w-full h-[10%]"}>
+            <span
+              className={
+                "h-full flex items-center justify-center rounded-b-md bg-slate-700 text-white text-base cursor-pointer"
+              }
+              onClick={() => {
+                window.open(modalContent.link, "_blank");
+              }}
+            >
               Go to Website
-            </a>
+            </span>
           </div>
         </Modal>
       )}

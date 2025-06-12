@@ -160,19 +160,20 @@ export const workDetailData = [
   {
     icon: "/tourvis_og.jpg",
     title: "Tourvis",
-    description:
-      "<b>Key Contributions</b>" +
-      "<br />" +
-      "· Developed PC & Mobile web page with responsive design." +
-      "<br />" +
-      "· Improved UX with convenient features:" +
-      "<br />" +
-      "<div style='margin-left: 1em'>– Displayed PDF voucher in modal, integrated Google Maps, added price view on calendar,<br />– Built review section with ratings and tags, toast-style error messages.</div>" +
-      "<br />" +
-      "· Implemented hybrid rendering (SSR + CSR) alongside React Server Components to improve SEO and enhance page load speed." +
-      "<br />" +
-      "· Actively used React Hooks to improve code reusability and maintainability across components.",
-    framework: "Next.js",
+    description: `<b>Key Contributions</b><br />
+· Developed responsive web pages for both PC and Mobile.<br />
+· Highlighted features I implemented:<br />
+<p style="margin-left: 1em">
+  – Review summary section aggregating tags and calculating average ratings<br />
+  – Calendar modal allowing users to select dates and get notified of stock arrival<br />
+  – PDF voucher modal with print, download, and new tab options<br />
+  – Address section integrated with Google Maps
+</p>
+· Implemented hybrid rendering (SSR + CSR) alongside React Server Components to improve SEO and enhance page load speed.<br />
+· Actively used React Hooks to improve code reusability and maintainability across components.
+`,
+    techStack: "Next.js, TypeScript, React, Redux, Sass, CSS, AWS",
+    collaboTools: "Bitbucket, Jira, Swagger",
     screenshots_pc: [
       "https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2Fcsv6qg%2FbtsOug7JuDG%2FrJ8stNjd5kOIJQuzSMmmA1%2Fimg.png",
       "https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FclEQUM%2FbtsOtur0YnH%2FTj7L3EojEZvMBzhXqj2cZk%2Fimg.png",
@@ -198,9 +199,22 @@ export const workDetailData = [
   {
     icon: "/privia_og.jpeg",
     title: "Privia",
-    description:
-      "Mobile app development involves creating software for mobile devices...",
-    framework: "Vue.js" + "<br />" + "Next.js",
+    description: `
+<b>Key Contributions</b><br />
+Developed credit card-related features as the travel website was operated by a credit card company.<br />
+<p style="margin-left: 1em">
+  - Instantly displayed adjusted prices when users selected specific cards or applied points<br />
+  - Implemented banners and tooltips reflecting the best possible discounts<br />
+  - Built a voucher modal adapting to each card type
+</p>
+  Additional features to enhance user convenience:<br />
+<p style="margin-left: 1em">
+- Real-time validation for traveller input forms (e.g. passport number, email, phone number)
+</p>
+Migrated a few pages from Vue.js to Next.js.<br />`,
+
+    techStack: `Vue.js, Next.js, JavaScript, TypeScript, CSS, AWS`,
+    collaboTools: "Bitbucket, Jira, Swagger",
     screenshots_pc: [
       "https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2Fcsv6qg%2FbtsOug7JuDG%2FrJ8stNjd5kOIJQuzSMmmA1%2Fimg.png",
       "https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FclEQUM%2FbtsOtur0YnH%2FTj7L3EojEZvMBzhXqj2cZk%2Fimg.png",
