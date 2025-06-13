@@ -166,7 +166,9 @@ export default function Services({ isDarkMode }: { isDarkMode: boolean }) {
               </section>
               <section className="screenshot">
                 <h6 className={"font-bold"}>Screenshots</h6>
-                <p className={"mt-3 ml-1 font-semibold text-gray-600 text-sm"}>
+                <p
+                  className={`mt-3 ml-1 font-semibold text-sm ${isDarkMode ? "text-gray-400" : "text-gray-600 "}`}
+                >
                   PC
                 </p>
                 <div className={"relative mt-3"}>
@@ -178,7 +180,7 @@ export default function Services({ isDarkMode }: { isDarkMode: boolean }) {
                       prevEl: ".main-banner-prev",
                     }}
                     slidesPerView={1}
-                    className={`border-[0.5px] border-gray-200 rounded-lg ${isDarkMode ? "" : "shadow-lg shadow-gray-300"}`}
+                    className={`rounded-lg ${isDarkMode ? "" : "border-[0.5px] border-gray-200 shadow-lg shadow-gray-300"}`}
                     onSlideChange={() =>
                       setTinySwiperPcIdx(
                         bigSwiperPcRef.current?.swiper.activeIndex ?? 0,
@@ -220,7 +222,9 @@ export default function Services({ isDarkMode }: { isDarkMode: boolean }) {
                     </Swiper>
                   </div>
                 </div>
-                <p className={"mt-7 ml-1  font-semibold text-gray-600 text-sm"}>
+                <p
+                  className={`mt-7 ml-1 font-semibold text-sm ${isDarkMode ? "text-gray-400" : "text-gray-600"}`}
+                >
                   MO
                 </p>
                 <div className={"relative mt-3"}>
