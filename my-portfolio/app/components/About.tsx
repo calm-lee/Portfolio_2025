@@ -52,8 +52,8 @@ export default function About({ isDarkMode }: { isDarkMode: boolean }) {
           transition={{ duration: 1, delay: 0.5 }}
           className={"w-4/5 border-[0.5px] border-gray-400 rounded-xl font-Ovo"}
         >
-          <h4 className={"mb-6 text-gray-700 font-Ovo dark:text-white/80"}>
           <h1
+            className={"p-5 text-xl text-gray-700 font-Ovo dark:text-white/80"}
           >
             My Career
           </h1>
