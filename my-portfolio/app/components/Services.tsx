@@ -1,4 +1,4 @@
-import { serviceData, workDetailData } from "@/assets/assets";
+import { assets, serviceData, workDetailData } from "@/assets/assets";
 import Image from "next/image";
 import React, { useRef, useState } from "react";
 import Modal from "@/app/components/Modal";
@@ -33,6 +33,12 @@ export default function Services({ isDarkMode }: { isDarkMode: boolean }) {
     }
   };
 
+  const closeModal = () => {
+    setTinySwiperPcIdx(0);
+    setTinySwiperMoIdx(0);
+    setIsModalOpen(false);
+  };
+
   return (
     <>
       <div
@@ -42,10 +48,10 @@ export default function Services({ isDarkMode }: { isDarkMode: boolean }) {
         }
       >
         <div>
-          <h4 className={"text-center mb-2 text-lg font-Ovo"}>What I offer</h4>
-          <h2 className={"text-center text-5xl font-Ovo"}>My Services</h2>
+          <h4 className={"text-center mb-2 text-lg font-Ovo"}>What I built</h4>
+          <h2 className={"text-center text-5xl font-Ovo"}>My Works</h2>
           <p className={"text-center max-w-2xl mx-auto mt-5 mb-10 font-Ovo"}>
-            Those are my services that I offer.
+            Explore the services I worked on.
           </p>
         </div>
         <ul className={"w-[80%] grid grid-cols-1 sm:grid-cols-2 gap-14 my-10"}>
@@ -90,9 +96,7 @@ export default function Services({ isDarkMode }: { isDarkMode: boolean }) {
                     {tools.map((tool, index) => (
                       <li
                         key={index}
-                        className={
-                          "flex items-center justify-center w-10 sm:w-12 aspect-square border-[0.5px] border-gray-400 rounded-xl"
-                        }
+                        className={`flex items-center justify-center w-10 sm:w-12 aspect-square rounded-xl ${isDarkMode ? "border-[0.5px] border-white bg-white bg-opacity-40" : "border-[0.5px] border-gray-400"}`}
                       >
                         <Image
                           src={tool}
@@ -109,11 +113,17 @@ export default function Services({ isDarkMode }: { isDarkMode: boolean }) {
         </ul>
       </div>
       {modalContent && (
-        <Modal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)}>
+        <Modal isOpen={isModalOpen} onClose={() => closeModal()}>
           <div className={"flex flex-col text-base pt-3 px-3 h-[90%]"}>
             <section className={"shrink-0 p-5 flex flex-row justify-between"}>
-              <h1 className={"text-xl font-semibold"}>{modalContent.title}</h1>
-              <button onClick={() => setIsModalOpen(false)}>X</button>
+              <h1 className={"text-2xl font-semibold"}>{modalContent.title}</h1>
+              <button onClick={() => closeModal()} className={"mb-2"}>
+                <Image
+                  src={isDarkMode ? assets.close_white : assets.close_black}
+                  className={"w-3 cursor-pointer"}
+                  alt={"close_icon"}
+                />
+              </button>
             </section>
             <section
               className={
@@ -124,7 +134,7 @@ export default function Services({ isDarkMode }: { isDarkMode: boolean }) {
                 <div>
                   <h6 className={"font-bold"}>Type</h6>
                   <div>
-                    <p>PC, Mobile (Responsive)</p>
+                    <p>PC, Mobile</p>
                   </div>
                 </div>
                 <div>
@@ -168,9 +178,7 @@ export default function Services({ isDarkMode }: { isDarkMode: boolean }) {
                       prevEl: ".main-banner-prev",
                     }}
                     slidesPerView={1}
-                    className={
-                      "border-[0.5px] border-gray-200 shadow-lg shadow-gray-300 rounded-lg"
-                    }
+                    className={`border-[0.5px] border-gray-200 rounded-lg ${isDarkMode ? "" : "shadow-lg shadow-gray-300"}`}
                     onSlideChange={() =>
                       setTinySwiperPcIdx(
                         bigSwiperPcRef.current?.swiper.activeIndex ?? 0,
@@ -224,9 +232,7 @@ export default function Services({ isDarkMode }: { isDarkMode: boolean }) {
                       prevEl: ".main-banner-prev",
                     }}
                     slidesPerView={1}
-                    className={
-                      "border-[0.5px] border-gray-200 shadow-lg shadow-gray-300 rounded-lg"
-                    }
+                    className={`border-[0.5px] border-gray-200 rounded-lg ${isDarkMode ? "" : "shadow-lg shadow-gray-300"}`}
                     onSlideChange={() =>
                       setTinySwiperMoIdx(
                         bigSwiperMoRef.current?.swiper.activeIndex ?? 0,
