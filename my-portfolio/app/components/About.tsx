@@ -50,27 +50,28 @@ export default function About({ isDarkMode }: { isDarkMode: boolean }) {
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           transition={{ duration: 1, delay: 0.5 }}
-          className={"w-4/5 border-[0.5px] border-gray-400 rounded-xl font-Ovo"}
+          className={
+            "w-4/5 border-[0.5px] border-gray-400 rounded-xl font-Ovo p-5"
+          }
         >
-          <h1
-            className={"p-5 text-xl text-gray-700 font-Ovo dark:text-white/80"}
-          >
+          <h1 className={"text-gray-500 dark:text-white/80 uppercase"}>
             My Career
           </h1>
-          <div className={"px-5"}>
+          <div className={"mt-5"}>
             <ul>
               {careerData.map((career, index) => (
-                <li className={"mb-16"}>
+                <li className={"mb-10"} key={index}>
                   <div className={"grid sm:grid-cols-8 sm:gap-8 md:gap-4"}>
                     <header
                       className={
-                        "sm:col-span-2 text-xs tracking-wide text-gray-500 font-semibold"
+                        "sm:col-span-1 text-xl tracking-wide text-gray-500"
                       }
                       aria-label={career.duration}
                     >
-                      {career.duration}
+                      2021.12
+                      <br />— 2024.2
                     </header>
-                    <div className={"sm:col-span-6"}>
+                    <div className={"sm:col-span-7"}>
                       <h3
                         className={
                           "font-semibold text-gray-700 dark:text-white"
@@ -97,14 +98,14 @@ export default function About({ isDarkMode }: { isDarkMode: boolean }) {
                         {/*    <img src={tool} alt={"tool"} />*/}
                         {/*  </li>*/}
                         {/*)*/}
-                        {career.tools.map((tool, index) => (
-                          <li
-                            key={index}
-                            className={`flex items-center justify-center w-10 sm:w-12 aspect-square rounded-xl ${isDarkMode ? "border-[0.5px] border-white bg-white bg-opacity-40" : "border-[0.5px] border-gray-400"}`}
-                          >
-                            <Image src={tool} alt={"Tool"} className={"w-4x"} />
-                          </li>
-                        ))}
+                        {/*{career.tools.map((tool, index) => (*/}
+                        {/*  <li*/}
+                        {/*    key={index}*/}
+                        {/*    className={`flex items-center justify-center w-10 sm:w-12 aspect-square rounded-xl ${isDarkMode ? "border-[0.5px] border-white bg-white bg-opacity-40" : "border-[0.5px] border-gray-400"}`}*/}
+                        {/*  >*/}
+                        {/*    <Image src={tool} alt={"Tool"} className={"w-4x"} />*/}
+                        {/*  </li>*/}
+                        {/*))}*/}
                       </ul>
                     </div>
                   </div>
@@ -113,20 +114,21 @@ export default function About({ isDarkMode }: { isDarkMode: boolean }) {
             </ul>
           </div>
         </motion.div>
-        <motion.div className={"w-4/5 flex flex-col items-center"}>
-          <h4
-            className={
-              "p-5 text-xl text-gray-700 font-Ovo dark:text-white/80 text-center"
-            }
-          >
+        <motion.div
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ duration: 1, delay: 0.5 }}
+          className={"w-4/5 border-[0.5px] border-gray-400 rounded-xl p-5"}
+        >
+          <h4 className={"mb-5 text-gray-500 dark:text-white/80 uppercase"}>
             Tools I use
           </h4>
-          <ul className={"flex flex-row gap-3 sm:gap-5"}>
+          <ul className={"w-full flex flex-row sm:gap-10"}>
             {toolsData.map((tool, index) => (
               <li
                 key={index}
                 className={
-                  "flex items-center justify-center w-12 sm:w-14 aspect-square border-[0.5px] border-gray-400 rounded-xl cursor-pointer hover:-translate-y-1 duration-500"
+                  "flex items-center justify-center aspect-square rounded-lg w-10 sm:w-12 bg-white bg-opacity-40 border-[0.5px] border-gray-400"
                 }
               >
                 <Image src={tool} alt={"Tool"} className={"w-5 sm:w-7"} />

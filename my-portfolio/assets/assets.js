@@ -7,16 +7,18 @@ import project_icon from "./project-icon.png";
 import project_icon_dark from "./project-icon-dark.png";
 import nextjs from "./nextjs.svg";
 import react from "./react.svg";
+import vuejs from "./vuejs.svg";
 import aws from "./aws.svg";
 import bitbucket from "./bitbucket.svg";
 import jira from "./jira.svg";
 import swagger from "./swagger.svg";
-import vuejs from "./vuejs.svg";
 import vscode from "./vscode.png";
 import sentry from "./sentry.svg";
 import storybook from "./storybook.svg";
 import figma from "./figma.png";
 import git from "./git.png";
+import tailwind from "./tailwind.svg";
+import scss from "./scss.svg";
 import right_arrow_white from "./right-arrow-white.png";
 import logo from "./logo.png";
 import logo_dark from "./logo_dark.png";
@@ -60,15 +62,17 @@ export const assets = {
   vscode,
   nextjs,
   react,
-  aws,
-  bitbucket,
-  jira,
-  swagger,
   vuejs,
+  aws,
+  git,
+  jira,
+  bitbucket,
+  swagger,
   sentry,
   storybook,
+  tailwind,
+  scss,
   figma,
-  git,
   right_arrow_white,
   logo,
   logo_dark,
@@ -293,9 +297,14 @@ export const infoList = [
 export const toolsData = [
   assets.nextjs,
   assets.vuejs,
+  assets.react,
   assets.aws,
+  assets.git,
   assets.bitbucket,
   assets.jira,
   assets.swagger,
-  assets.git,
+  assets.sentry,
+  assets.storybook,
+  assets.tailwind,
+  assets.scss,
 ];
