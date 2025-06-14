@@ -6,12 +6,15 @@ import edu_icon_dark from "./edu-icon-dark.png";
 import project_icon from "./project-icon.png";
 import project_icon_dark from "./project-icon-dark.png";
 import nextjs from "./nextjs.svg";
+import react from "./react.svg";
 import aws from "./aws.svg";
 import bitbucket from "./bitbucket.svg";
 import jira from "./jira.svg";
 import swagger from "./swagger.svg";
 import vuejs from "./vuejs.svg";
 import vscode from "./vscode.png";
+import sentry from "./sentry.svg";
+import storybook from "./storybook.svg";
 import figma from "./figma.png";
 import git from "./git.png";
 import right_arrow_white from "./right-arrow-white.png";
@@ -56,11 +59,14 @@ export const assets = {
   project_icon_dark,
   vscode,
   nextjs,
+  react,
   aws,
   bitbucket,
   jira,
   swagger,
   vuejs,
+  sentry,
+  storybook,
   figma,
   git,
   right_arrow_white,
@@ -95,6 +101,34 @@ export const assets = {
   linkedIn_logo,
   ey_circle,
 };
+
+export const careerData = [
+  {
+    duration: "2021.12 — 2024.2",
+    position: "Frontend Engineer",
+    company: "TIDESQUARE",
+    company_description: "Travel Agency",
+    location: "Seoul, South Korea",
+    description: `
+· Took full FE ownership of the Ticket category at a travel agency.<br />
+· Developed and maintained the two travel websites using Next.js and Vue.js each.<br />
+· Improved UX by implementing features such as review summaries, stock alert, and real-time form validation etc.<br />
+· Enhanced performance and maintainability by modularising components and using React Hooks.<br />
+· Refactored legacy code by eliminating duplication and extracting common functions into reusable modules.<br />
+`,
+    tools: [
+      assets.nextjs,
+      assets.vuejs,
+      assets.react,
+      assets.aws,
+      assets.bitbucket,
+      assets.jira,
+      assets.swagger,
+      assets.sentry,
+      assets.storybook,
+    ],
+  },
+];
 
 export const workData = [
   {
