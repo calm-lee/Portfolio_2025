@@ -13,7 +13,8 @@
 }
 
 .custom-scroll::-webkit-scrollbar-track {
-  background: transparent;
+  background-color: transparent;
+
 }
 
 .custom-scroll::-webkit-scrollbar-thumb {

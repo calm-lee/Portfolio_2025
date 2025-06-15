@@ -43,7 +43,7 @@ export default function Header({ isDarkMode }: { isDarkMode: boolean }) {
         transition={{ duration: 0.8, delay: 0.5 }}
         className={"text-3xl sm:text-6xl lg:text-[40px] font-Ovo"}
       >
-        Chloe Lee, Frontend engineer
+        Chloe Lee
       </motion.h3>
       <motion.p
         initial={{ opacity: 0 }}
@@ -51,44 +51,24 @@ export default function Header({ isDarkMode }: { isDarkMode: boolean }) {
         transition={{ duration: 0.6, delay: 0.7 }}
         className={"max-w-2xl mx-auto font-Ovo"}
       >
-        Hello World, I'm Chloe having 3 years of frontend engineering
+        Hello, world. I'm Chloe — a frontend engineer with 3 years of
         experience.
-        <br />
-        I've been using Next.js mostly with TypeScript and sometimes Vue.js.
-        <br />
-        I'm a developer who approaches UX with empathy, responsibility, and
-        depth for users.
+        <br />I approach UX with empathy, responsibility, and depth.
       </motion.p>
       <div className={"flex flex-col sm:flex-row gap-4 mt-4"}>
         <motion.a
           initial={{ y: 30, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
-          transition={{ duration: 0.6, delay: 1 }}
-          href={"#contact"}
+          transition={{ duration: 0.6, delay: 1.0 }}
+          href={"/sample_resume.pdf"}
+          download
           className={
             "px-10 py-3 flex items-center border border-white bg-black text-white rounded-full gap-2 dark:bg-transparent"
           }
         >
-          contact me
-          <Image
-            src={assets.right_arrow_white}
-            alt={"arrow_white"}
-            className={"w-4"}
-          />
-        </motion.a>
-        <motion.a
-          initial={{ y: 30, opacity: 0 }}
-          whileInView={{ y: 0, opacity: 1 }}
-          transition={{ duration: 0.6, delay: 1.2 }}
-          href={"/sample_resume.pdf"}
-          download
-          className={
-            "px-10 py-3 border border-gray-500 rounded-full flex items-center gap-2 dark:bg-white dark:text-black"
-          }
-        >
           my resume
           <Image
-            src={assets.download_icon}
+            src={assets.download_icon_white}
             alt={"arrow_white"}
             className={"w-4"}
           />

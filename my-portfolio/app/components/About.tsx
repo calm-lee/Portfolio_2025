@@ -36,14 +36,14 @@ export default function About({ isDarkMode }: { isDarkMode: boolean }) {
         transition={{ duration: 0.8, delay: 0.3 }}
         className={"text-center max-w-2xl mx-auto mt-10  font-Ovo"}
       >
-        I am an experienced Frontend Engineer.
+        Check out my journey and stack below.
       </motion.p>
       <motion.div
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         transition={{ duration: 0.6, delay: 0.5 }}
         className={
-          "w-full flex flex-col gap-10 my-20 justify-center items-center"
+          "w-full flex flex-col gap-10 my-10 justify-center items-center"
         }
       >
         <motion.div
@@ -57,21 +57,21 @@ export default function About({ isDarkMode }: { isDarkMode: boolean }) {
           <h1 className={"text-gray-500 dark:text-white/80 uppercase"}>
             My Career
           </h1>
-          <div className={"mt-5"}>
+          <div className={"my-5"}>
             <ul>
               {careerData.map((career, index) => (
-                <li className={"mb-10"} key={index}>
-                  <div className={"grid sm:grid-cols-8 sm:gap-8 md:gap-4"}>
+                <li className={""} key={index}>
+                  <div className={"grid xl:grid-cols-8 sm:gap-8 md:gap-4"}>
                     <header
                       className={
-                        "sm:col-span-1 text-xl tracking-wide text-gray-500"
+                        "xl:col-span-1 text-xl tracking-wide text-gray-400 pt-1"
                       }
                       aria-label={career.duration}
                     >
                       2021.12
                       <br />— 2024.2
                     </header>
-                    <div className={"sm:col-span-7"}>
+                    <div className={"mt-3 sm:mt-0 xl:col-span-7"}>
                       <h3
                         className={
                           "font-semibold text-gray-700 dark:text-white"
@@ -86,7 +86,9 @@ export default function About({ isDarkMode }: { isDarkMode: boolean }) {
                         {career.company_description} ({career.location})
                       </h4>
                       <p
-                        className={"mt-3 text-sm"}
+                        className={
+                          "mt-3 text-sm leading-loose text-gray-700 dark:text-white"
+                        }
                         dangerouslySetInnerHTML={{ __html: career.description }}
                       ></p>
                       <ul className={"mt-3 text-sm"}>
@@ -123,15 +125,19 @@ export default function About({ isDarkMode }: { isDarkMode: boolean }) {
           <h4 className={"mb-5 text-gray-500 dark:text-white/80 uppercase"}>
             Tools I use
           </h4>
-          <ul className={"w-full flex flex-row sm:gap-10"}>
+          <ul
+            className={
+              "w-full grid grid-cols-6 xl:grid-cols-12 gap-5 justify-items-center"
+            }
+          >
             {toolsData.map((tool, index) => (
               <li
                 key={index}
                 className={
-                  "flex items-center justify-center aspect-square rounded-lg w-10 sm:w-12 bg-white bg-opacity-40 border-[0.5px] border-gray-400"
+                  "flex items-center justify-center aspect-square rounded-full w-8 md:w-10 bg-white bg-opacity-40 border-[0.5px] border-gray-400"
                 }
               >
-                <Image src={tool} alt={"Tool"} className={"w-5 sm:w-7"} />
+                <Image src={tool} alt={"Tool"} className={"w-5 md:w-6"} />
               </li>
             ))}
           </ul>

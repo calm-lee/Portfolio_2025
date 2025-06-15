@@ -26,6 +26,7 @@ import mail_icon from "./mail_icon.png";
 import mail_icon_dark from "./mail_icon_dark.png";
 import profile_img from "./profile-img.png";
 import download_icon from "./download-icon.png";
+import download_icon_white from "./download-icon-white.png";
 import hand_icon from "./hand-icon.png";
 import header_bg_color from "./header-bg-color.png";
 import moon_icon from "./moon_icon.png";
@@ -46,8 +47,10 @@ import right_arrow_bold from "./right-arrow-bold.png";
 import right_arrow_bold_dark from "./right-arrow-bold-dark.png";
 import swiper_left_arrow from "./swiper-left-arrow-icon.svg";
 import swiper_right_arrow from "./swiper-right-arrow-icon.svg";
-import blog_logo from "./blog-logo.png";
+import blog_logo from "./blog-logo.svg";
+import blog_logo_white from "./blog-logo-white.svg";
 import github_logo from "./github-logo.svg";
+import github_logo_white from "./github-logo-white.svg";
 import linkedIn_logo from "./linkedIn-logo.png";
 import ey_circle from "./ey_circle.png";
 
@@ -80,6 +83,7 @@ export const assets = {
   mail_icon_dark,
   profile_img,
   download_icon,
+  download_icon_white,
   hand_icon,
   header_bg_color,
   moon_icon,
@@ -101,7 +105,9 @@ export const assets = {
   right_arrow_bold,
   right_arrow_bold_dark,
   blog_logo,
+  blog_logo_white,
   github_logo,
+  github_logo_white,
   linkedIn_logo,
   ey_circle,
 };
@@ -159,7 +165,7 @@ export const workData = [
 export const serviceData = [
   {
     icon: "/tourvis_og.jpg",
-    title: "Tourvis",
+    title: "TOURViS",
     title2: "Travel Agency Website",
     description:
       "Full FE ownership of Ticket category" +
@@ -176,7 +182,7 @@ export const serviceData = [
   },
   {
     icon: "/privia_og.jpeg",
-    title: "Privia",
+    title: "PRIVIA",
     title2: "Travel Agency Website",
     description:
       "Full FE ownership of Ticket category" +
@@ -197,7 +203,7 @@ export const serviceData = [
 export const workDetailData = [
   {
     icon: "/tourvis_og.jpg",
-    title: "Tourvis",
+    title: "TOURViS",
     description: `<b>Key Contributions</b><br />
 · Took full ownership of development and maintenance for the Ticket category.<br />
 · Highlighted features I implemented:<br />
@@ -236,7 +242,7 @@ export const workDetailData = [
   },
   {
     icon: "/privia_og.jpeg",
-    title: "Privia",
+    title: "PRIVIA",
     description: `
 <b>Key Contributions</b><br />
 · Took full ownership of development and maintenance for the Ticket category.<br />
