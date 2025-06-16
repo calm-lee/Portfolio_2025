@@ -9,7 +9,7 @@ export default function Header({ isDarkMode }: { isDarkMode: boolean }) {
       rotate: [0, 15, -10, 15, -10, 5, 0],
       transition: {
         duration: 1,
-        repeat: 1,
+        repeat: 3,
         ease: "easeInOut",
       },
     },
@@ -46,7 +46,7 @@ export default function Header({ isDarkMode }: { isDarkMode: boolean }) {
         transition={{ duration: 0.6, delay: 0.3 }}
         whileHover={{
           rotate: [0, 15, -10, 15, -10, 5, 0],
-          transition: { duration: 0.5, ease: "easeInOut", repeat: Infinity },
+          transition: { duration: 1, ease: "easeInOut", repeat: Infinity },
         }}
         className={"flex items-center gap-2 text-xl md:text-2xl mb-3"}
         variants={waveAnimation}

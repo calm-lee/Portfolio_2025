@@ -95,18 +95,20 @@ export default function Contact({ isDarkMode }: { isDarkMode: boolean }) {
         I'm always happy to connect and explore new opportunities — feel free to
         reach out!
       </p>
-      <p
-        className={
-          "flex items-center justify-center gap-1 text-gray-500 dark:text-white/90 font-semibold text-sm"
-        }
-      >
-        <Image
-          src={isDarkMode ? assets.mail_icon_dark : assets.mail_icon}
-          alt={"email"}
-          className={"w-5"}
-        />
-        sn920647@gmail.com
+      <p className={"text-gray-500 dark:text-white/90 font-semibold text-sm"}>
+        <a
+          href={"mailto:sn920647@gmail.com"}
+          className={"flex items-center justify-center gap-1 "}
+        >
+          <Image
+            src={isDarkMode ? assets.mail_icon_dark : assets.mail_icon}
+            alt={"email"}
+            className={"w-5"}
+          />
+          <span>sn920647@gmail.com</span>
+        </a>
       </p>
+
       {/*<form className={"max-w-2xl mx-auto"} onSubmit={onSubmit}>*/}
       {/*  <div className={"grid grid-cols-auto gap-6"}>*/}
       {/*    <input*/}
