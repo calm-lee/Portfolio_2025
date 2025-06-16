@@ -1,11 +1,10 @@
 import { careerData, toolsData } from "@/assets/assets";
 import Image from "next/image";
 import { motion } from "motion/react";
-import React, { useRef } from "react";
+import React from "react";
+import { isMobile, isTablet } from "react-device-detect";
 
 export default function About({ isDarkMode }: { isDarkMode: boolean }) {
-  const listRefs = useRef<(HTMLLIElement | null)[]>([]);
-
   return (
     <motion.div
       id={"about"}
@@ -50,9 +49,7 @@ export default function About({ isDarkMode }: { isDarkMode: boolean }) {
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           transition={{ duration: 1, delay: 0.5 }}
-          className={
-            "w-4/5 border-[0.5px] border-gray-400 rounded-xl font-Ovo p-5"
-          }
+          className={`${isMobile && !isTablet ? "w-full" : "w-4/5"} border-[0.5px] border-gray-400 rounded-xl font-Ovo p-5`}
         >
           <h1 className={"text-gray-500 dark:text-white/80 uppercase"}>
             My Career
@@ -71,7 +68,7 @@ export default function About({ isDarkMode }: { isDarkMode: boolean }) {
                       2021.12
                       <br />— 2024.2
                     </header>
-                    <div className={"mt-3 sm:mt-0 xl:col-span-7"}>
+                    <div className={"mt-6 xl:mt-3 xl:col-span-7"}>
                       <h3
                         className={
                           "font-semibold text-gray-700 dark:text-white"
@@ -87,28 +84,10 @@ export default function About({ isDarkMode }: { isDarkMode: boolean }) {
                       </h4>
                       <p
                         className={
-                          "mt-3 text-sm leading-loose text-gray-700 dark:text-white"
+                          "mt-6 xl:mt-3 text-sm leading-loose text-gray-700 dark:text-white"
                         }
                         dangerouslySetInnerHTML={{ __html: career.description }}
                       ></p>
-                      <ul className={"mt-3 text-sm"}>
-                        {/*{career.tools.map((tool, index) => (*/}
-                        {/*  <li*/}
-                        {/*    key={index}*/}
-                        {/*    className={"flex items-center justify-center w-3"}*/}
-                        {/*  >*/}
-                        {/*    <img src={tool} alt={"tool"} />*/}
-                        {/*  </li>*/}
-                        {/*)*/}
-                        {/*{career.tools.map((tool, index) => (*/}
-                        {/*  <li*/}
-                        {/*    key={index}*/}
-                        {/*    className={`flex items-center justify-center w-10 sm:w-12 aspect-square rounded-xl ${isDarkMode ? "border-[0.5px] border-white bg-white bg-opacity-40" : "border-[0.5px] border-gray-400"}`}*/}
-                        {/*  >*/}
-                        {/*    <Image src={tool} alt={"Tool"} className={"w-4x"} />*/}
-                        {/*  </li>*/}
-                        {/*))}*/}
-                      </ul>
                     </div>
                   </div>
                 </li>
@@ -120,7 +99,7 @@ export default function About({ isDarkMode }: { isDarkMode: boolean }) {
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           transition={{ duration: 1, delay: 0.5 }}
-          className={"w-4/5 border-[0.5px] border-gray-400 rounded-xl p-5"}
+          className={`${isMobile && !isTablet ? "w-full" : "w-4/5"} border-[0.5px] border-gray-400 rounded-xl p-5`}
         >
           <h4 className={"mb-5 text-gray-500 dark:text-white/80 uppercase"}>
             Tools I use

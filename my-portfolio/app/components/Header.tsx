@@ -3,6 +3,18 @@ import { assets } from "@/assets/assets";
 import { motion } from "motion/react";
 
 export default function Header({ isDarkMode }: { isDarkMode: boolean }) {
+  const waveAnimation = {
+    initial: { rotate: 0 },
+    animate: {
+      rotate: [0, 15, -10, 15, -10, 5, 0],
+      transition: {
+        duration: 1,
+        repeat: 1,
+        ease: "easeInOut",
+      },
+    },
+  };
+
   return (
     <div
       className={
@@ -27,9 +39,19 @@ export default function Header({ isDarkMode }: { isDarkMode: boolean }) {
       </motion.div>
       <motion.div
         initial={{ y: -20, opacity: 0 }}
-        whileInView={{ y: 0, opacity: 1 }}
+        whileInView={{
+          y: 0,
+          opacity: 1,
+        }}
         transition={{ duration: 0.6, delay: 0.3 }}
+        whileHover={{
+          rotate: [0, 15, -10, 15, -10, 5, 0],
+          transition: { duration: 0.5, ease: "easeInOut", repeat: Infinity },
+        }}
         className={"flex items-center gap-2 text-xl md:text-2xl mb-3"}
+        variants={waveAnimation}
+        animate="animate"
+        style={{ display: "inline-block", transformOrigin: "70% 70%" }}
       >
         <Image
           src={assets.hand_icon}

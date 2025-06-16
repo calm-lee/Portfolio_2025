@@ -1,4 +1,5 @@
 import React, { useEffect } from "react";
+import { isMobile, isTablet } from "react-device-detect";
 
 interface ModalProps {
   isOpen: boolean;
@@ -29,7 +30,7 @@ export default function Modal({ isOpen, onClose, children }: ModalProps) {
       onClick={onClose}
     >
       <div
-        className="bg-white dark:bg-gray-800 rounded-xl shadow-lg w-full max-w-screen-md h-[80%]"
+        className={`${isMobile && !isTablet ? "w-[90%]" : "w-full"} bg-white dark:bg-gray-800 rounded-xl max-w-screen-md shadow-lg h-[80%]`}
         onClick={(e) => e.stopPropagation()} // 모달 내부 클릭은 닫히지 않도록
       >
         {children}

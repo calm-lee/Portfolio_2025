@@ -54,13 +54,15 @@ const NavBar = ({
       <nav
         className={`w-full fixed px-5 lg:px-8 xl:px-[8%] py-4 flex item-center justify-between z-50 ${isScroll ? "bg-white bg-opacity-50 backdrop-blur-lg shadow-sm dark:bg-darkTheme dark:shadow-white/20" : ""}`}
       >
-        <a href="#top">
-          <Image
-            src={isDarkMode ? assets.logo_dark : assets.logo}
-            className="w-28 cursor-pointer ml-24 mt-2"
-            alt="logo"
-          />
-        </a>
+        <div className={"w-20 flex items-center justify-center"}>
+          <a href="#top">
+            <Image
+              src={isDarkMode ? assets.logo_dark : assets.logo}
+              className="w-20 cursor-pointer"
+              alt="logo"
+            />
+          </a>
+        </div>
         <ul
           className={`hidden md:flex items-center gap-6 lg:gap-8 rounded-full px-12 py-3 ${isScroll ? "" : "bg-white shadow-sm bg-opacity-50 dark:bg-transparent dark:border dark:border-white/50"}`}
         >
@@ -85,7 +87,7 @@ const NavBar = ({
             </a>
           </li>
         </ul>
-        <div className={"flex items-center gap-4"}>
+        <div className={"w-20 flex items-center justify-center"}>
           <button onClick={() => setDarkMode((prev: boolean) => !prev)}>
             <Image
               src={isDarkMode ? assets.sun_icon : assets.moon_icon}
@@ -134,11 +136,6 @@ const NavBar = ({
           <li>
             <a href="#about" onClick={closeMenu} className="font-Ovo">
               About me
-            </a>
-          </li>
-          <li>
-            <a href="#services" onClick={closeMenu} className="font-Ovo">
-              Services
             </a>
           </li>
           <li>

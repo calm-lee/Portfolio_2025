@@ -5,6 +5,8 @@ import Modal from "@/app/components/Modal";
 import { Swiper, SwiperRef, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import { Navigation, Pagination } from "swiper/modules";
+import { isMobile, isTablet } from "react-device-detect";
+import { motion } from "motion/react";
 
 export default function Work({ isDarkMode }: { isDarkMode: boolean }) {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -54,7 +56,9 @@ export default function Work({ isDarkMode }: { isDarkMode: boolean }) {
             Explore the services I worked on.
           </p>
         </div>
-        <ul className={"w-[80%] grid grid-cols-1 sm:grid-cols-2 gap-14 my-10"}>
+        <ul
+          className={`${isMobile && !isTablet ? "w-full" : "w-4/5"} grid grid-cols-1 sm:grid-cols-2 gap-14 my-10`}
+        >
           {serviceData.map(
             ({ icon, title, title2, description, link, tools }, index) => (
               <li

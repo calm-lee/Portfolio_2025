@@ -12,7 +12,7 @@ export default function Footer({ isDarkMode }: { isDarkMode: boolean }) {
         <p className={"text-center"}>ⓒ 2025 Chole Lee. All rights reserved.</p>
         <Image
           src={isDarkMode ? assets.logo_dark : assets.logo}
-          className={"w-16"}
+          className={"w-16 mt-3 lg:mt-0"}
           alt={"logo"}
         />
       </div>
