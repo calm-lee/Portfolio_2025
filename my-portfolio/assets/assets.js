@@ -204,14 +204,14 @@ export const workDetailData = [
   {
     icon: "/tourvis_og.jpg",
     title: "TOURViS",
-    description: `<b>Key Contributions</b><br />
+    description: `<b class="text-base">Key Contributions</b><br />
 · Took full ownership of development and maintenance for the Ticket category.<br />
 · Highlighted features I implemented:<br />
 <p style="margin-left: 1em">
-  – Review summary section aggregating tags and calculating average ratings<br />
-  – Calendar modal allowing users to select dates and get notified of stock arrival<br />
-  – PDF voucher modal with print, download, and new tab options<br />
-  – Address section integrated with Google Maps
+  – Review summary section aggregating tags and calculating average ratings.<br />
+  – Calendar modal allowing users to select dates and get notified of stock arrival.<br />
+  – PDF voucher modal with print, download, and new tab options.<br />
+  – Address section integrated with Google Maps.
 </p>
 · Implemented hybrid rendering (SSR + CSR) alongside React Server Components to improve SEO and enhance page load speed.<br />
 · Actively used React Hooks to improve code reusability and maintainability across components.
@@ -244,7 +244,7 @@ export const workDetailData = [
     icon: "/privia_og.jpeg",
     title: "PRIVIA",
     description: `
-<b>Key Contributions</b><br />
+<b class="text-base">Key Contributions</b><br />
 · Took full ownership of development and maintenance for the Ticket category.<br />
 · Highlighted features I implemented:<br />
 <p style="margin-left: 1em">

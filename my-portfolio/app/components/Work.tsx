@@ -6,7 +6,6 @@ import { Swiper, SwiperRef, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import { Navigation, Pagination } from "swiper/modules";
 import { isMobile, isTablet } from "react-device-detect";
-import { motion } from "motion/react";
 
 export default function Work({ isDarkMode }: { isDarkMode: boolean }) {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -131,18 +130,18 @@ export default function Work({ isDarkMode }: { isDarkMode: boolean }) {
             </section>
             <section
               className={
-                "flex-1 custom-scroll p-5 flex flex-col gap-5 overflow-y-scroll"
+                "flex-1 custom-scroll p-5 flex flex-col gap-5 overflow-y-scroll  text-sm"
               }
             >
               <section className="grid grid-cols-3">
                 <div>
-                  <h6 className={"font-bold"}>Type</h6>
+                  <h6 className={"font-bold text-base"}>Type</h6>
                   <div>
                     <p>PC, Mobile</p>
                   </div>
                 </div>
                 <div>
-                  <h6 className={"font-bold"}>Tech Stack</h6>
+                  <h6 className={"font-bold text-base"}>Tech Stack</h6>
                   <div>
                     <p
                       dangerouslySetInnerHTML={{
@@ -152,7 +151,7 @@ export default function Work({ isDarkMode }: { isDarkMode: boolean }) {
                   </div>
                 </div>
                 <div>
-                  <h6 className={"font-bold"}>Collaboration Tools</h6>
+                  <h6 className={"font-bold text-base"}>Collaboration Tools</h6>
                   <div>
                     <p
                       dangerouslySetInnerHTML={{
@@ -169,7 +168,7 @@ export default function Work({ isDarkMode }: { isDarkMode: boolean }) {
                 />
               </section>
               <section className="screenshot">
-                <h6 className={"font-bold"}>Screenshots</h6>
+                <h4 className={"font-bold text-base"}>Screenshots</h4>
                 <p
                   className={`mt-3 ml-1 font-semibold text-sm ${isDarkMode ? "text-gray-400" : "text-gray-600 "}`}
                 >
