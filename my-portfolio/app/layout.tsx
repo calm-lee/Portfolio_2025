@@ -21,7 +21,7 @@ export const metadata: Metadata = {
     "Portfolio of Frontend Engineer building responsive, accessible websites using Next.js, React, and TypeScript.",
   openGraph: {
     title: "FE Engineer Chloe Lee's Portfolio",
-    url: "",
+    url: "https://portfolio-2025-iota-teal.vercel.app",
     siteName: "Chloe Lee's Portfolio",
     images: ["./logo.png"],
   },
