@@ -73,8 +73,9 @@ export default function Header({ isDarkMode }: { isDarkMode: boolean }) {
         transition={{ duration: 0.6, delay: 0.7 }}
         className={"max-w-2xl mx-auto font-Ovo"}
       >
-        Hello, world. I'm Chloe — a frontend engineer with 3 years of
-        experience.
+        Hello, World!
+        <br />
+        I'm Chloe — a frontend engineer with 3 years of experience.
         <br />I approach UX with empathy, responsibility, and depth.
       </motion.p>
       <div className={"flex flex-col sm:flex-row gap-4 mt-4"}>
