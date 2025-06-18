@@ -17,7 +17,14 @@ const ovo = Ovo({
 
 export const metadata: Metadata = {
   title: "Chloe Lee | Frontend Engineer",
-  description: "",
+  description:
+    "Portfolio of Frontend Engineer building responsive, accessible websites using Next.js, React, and TypeScript.",
+  openGraph: {
+    title: "FE Engineer Chloe Lee's Portfolio",
+    url: "",
+    siteName: "Chloe Lee's Portfolio",
+    images: ["./logo.png"],
+  },
 };
 
 export default function RootLayout({
@@ -27,6 +34,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="scroll-smooth dark">
+      <head>
+        <meta charSet="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+      </head>
       <body
         className={`${outfit.className} ${ovo.className} antialiased leading-8 overflow-x-hidden dark:bg-darkTheme dark:text-white`}
       >
