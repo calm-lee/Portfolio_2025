@@ -1,0 +1,11 @@
+.btn {
+    @apply font-Outfit inline-flex items-center justify-center font-medium rounded-md transition px-4 py-2 w-[100px];
+}
+
+.btn-primary {
+    @apply bg-primary shadow-black;
+}
+
+.btn-secondary {
+    @apply bg-secondary shadow-black;
+}
