@@ -102,8 +102,8 @@ export default function Work({ isDarkMode }: { isDarkMode: boolean }) {
                         className={`flex items-center justify-center w-10 sm:w-12 aspect-square rounded-xl ${isDarkMode ? "border-[0.5px] border-white bg-white bg-opacity-40" : "border-[0.5px] border-gray-400"}`}
                       >
                         <Image
-                          src={tool}
-                          alt={"Tool"}
+                          src={tool.src}
+                          alt={tool.title}
                           className={"w-4 sm:w-7"}
                         />
                       </li>
