@@ -63,22 +63,29 @@ export default function About({ isDarkMode }: { isDarkMode: boolean }) {
                       className={
                         "xl:col-span-1 text-xl tracking-wide text-gray-400 pt-1"
                       }
-                      aria-label={career.duration}
+                      aria-label={"career duration"}
                     >
                       2021.12
                       <br />— 2024.2
                     </header>
-                    <div className={"mt-6 xl:mt-3 xl:col-span-7"}>
+                    <div
+                      className={"mt-6 xl:mt-3 xl:col-span-7"}
+                      aria-label={"career description"}
+                    >
                       <h3
                         className={
                           "font-semibold text-gray-700 dark:text-white"
                         }
+                        aria-label={career.position}
                       >
                         {career.position}
                       </h3>
-                      <h4 className={"text-sm"}>{career.company}</h4>
+                      <h4 className={"text-sm"} aria-label={career.company}>
+                        {career.company}
+                      </h4>
                       <h4
                         className={"text-xs  text-gray-500 dark:text-white/60"}
+                        aria-label={`${career.company_description}(${career.location})`}
                       >
                         {career.company_description} ({career.location})
                       </h4>
@@ -87,6 +94,7 @@ export default function About({ isDarkMode }: { isDarkMode: boolean }) {
                           "mt-6 xl:mt-3 text-sm leading-loose text-gray-700 dark:text-white"
                         }
                         dangerouslySetInnerHTML={{ __html: career.description }}
+                        aria-label={"work description"}
                       ></p>
                     </div>
                   </div>
@@ -116,7 +124,11 @@ export default function About({ isDarkMode }: { isDarkMode: boolean }) {
                   "flex items-center justify-center aspect-square rounded-full w-8 md:w-10 bg-white bg-opacity-40 border-[0.5px] border-gray-400"
                 }
               >
-                <Image src={tool} alt={"Tool"} className={"w-5 md:w-6"} />
+                <Image
+                  src={tool.src}
+                  alt={tool.title}
+                  className={"w-5 md:w-6"}
+                />
               </li>
             ))}
           </ul>

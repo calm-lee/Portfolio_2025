@@ -91,8 +91,9 @@ const NavBar = ({
           <button onClick={() => setDarkMode((prev: boolean) => !prev)}>
             <Image
               src={isDarkMode ? assets.sun_icon : assets.moon_icon}
-              alt={"theme_logo"}
+              alt={"dark mode icon"}
               className={"w-6"}
+              aria-hidden={true}
             />
           </button>
           {/*<a*/}

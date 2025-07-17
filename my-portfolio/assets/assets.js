@@ -161,7 +161,7 @@ export const workData = [
 export const serviceData = [
   {
     icon: "/tourvis_og.jpg",
-    title: "TOURViS",
+    title: "TOURVIS",
     title2: "Travel Agency Website",
     description:
       "Full FE ownership of Ticket category" +
@@ -297,16 +297,16 @@ export const infoList = [
 ];
 
 export const toolsData = [
-  assets.nextjs,
-  assets.vuejs,
-  assets.react,
-  assets.aws,
-  assets.git,
-  assets.bitbucket,
-  assets.jira,
-  assets.swagger,
-  assets.sentry,
-  assets.storybook,
-  assets.tailwind,
-  assets.scss,
+  { title: "nextjs", src: assets.nextjs },
+  { title: "vuejs", src: assets.vuejs },
+  { title: "react", src: assets.react },
+  { title: "aws", src: assets.aws },
+  { title: "git", src: assets.git },
+  { title: "bitbucket", src: assets.bitbucket },
+  { title: "jira", src: assets.jira },
+  { title: "swagger", src: assets.swagger },
+  { title: "sentry", src: assets.sentry },
+  { title: "storybook", src: assets.storybook },
+  { title: "tailwind", src: assets.tailwind },
+  { title: "scss", src: assets.scss },
 ];
