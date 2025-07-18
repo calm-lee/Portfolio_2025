@@ -199,7 +199,7 @@ export const serviceData = [
 export const workDetailData = [
   {
     icon: "/tourvis_og.jpg",
-    title: "TOURViS",
+    title: "TOURVIS",
     description: `<b class="text-base">Key Contributions</b><br />
 · Took full ownership of development and maintenance for the Ticket category.<br />
 · Highlighted features I implemented:<br />
