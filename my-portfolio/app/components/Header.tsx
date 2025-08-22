@@ -2,7 +2,7 @@ import Image from "next/image";
 import { assets } from "@/assets/assets";
 import { motion } from "motion/react";
 
-export default function Header({ isDarkMode }: { isDarkMode: boolean }) {
+export default function Header() {
   const waveAnimation = {
     initial: { rotate: 0 },
     animate: {
@@ -78,10 +78,7 @@ export default function Header({ isDarkMode }: { isDarkMode: boolean }) {
         I'm Chloe — a frontend engineer with 3 years of experience.
         <br />I approach UX with empathy, responsibility, and depth.
       </motion.p>
-      <div
-        className={"flex flex-col sm:flex-row gap-4 mt-4"}
-        aria-label={"download resume button"}
-      >
+      <div className={"mt-4"} aria-label={"download resume button"}>
         <motion.a
           initial={{ y: 30, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
