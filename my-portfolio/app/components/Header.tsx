@@ -9,7 +9,7 @@ export default function Header() {
       rotate: [0, 15, -10, 15, -10, 5, 0],
       transition: {
         duration: 1,
-        repeat: 3,
+        repeat: Infinity,
         ease: "easeInOut",
       },
     },
