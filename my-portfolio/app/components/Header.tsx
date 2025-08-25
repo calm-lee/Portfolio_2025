@@ -43,10 +43,6 @@ export default function Header() {
           opacity: 1,
         }}
         transition={{ duration: 0.6, delay: 0.3 }}
-        whileHover={{
-          rotate: [0, 15, -10, 15, -10, 5, 0],
-          transition: { duration: 1, ease: "easeInOut", repeat: Infinity },
-        }}
         className={"flex items-center mb-3"}
         variants={waveAnimation}
         animate="animate"
