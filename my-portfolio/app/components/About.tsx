@@ -66,7 +66,7 @@ export default function About() {
                       aria-label={"career duration"}
                     >
                       2021.12
-                      <br />— 2024.2
+                      <br />— 2025.2
                     </header>
                     <div
                       className={"mt-6 xl:mt-3 xl:col-span-7"}

@@ -110,7 +110,7 @@ export const assets = {
 
 export const careerData = [
   {
-    duration: "2021.12 — 2024.2",
+    duration: "2021.12 — 2025.2",
     position: "Frontend Engineer",
     company: "TIDESQUARE",
     company_description: "Travel Agency",
