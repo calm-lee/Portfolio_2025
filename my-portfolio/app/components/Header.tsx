@@ -28,7 +28,6 @@ export default function Header() {
           type: "spring",
           duration: 0.8,
           stiffness: 20,
-          bounceDamping: 100,
         }}
       >
         <Image
@@ -48,7 +47,7 @@ export default function Header() {
           rotate: [0, 15, -10, 15, -10, 5, 0],
           transition: { duration: 1, ease: "easeInOut", repeat: Infinity },
         }}
-        className={"flex items-center gap-2 text-xl md:text-2xl mb-3"}
+        className={"flex items-center mb-3"}
         variants={waveAnimation}
         animate="animate"
         style={{ display: "inline-block", transformOrigin: "70% 70%" }}
