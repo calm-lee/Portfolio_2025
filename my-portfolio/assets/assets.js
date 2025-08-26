@@ -160,7 +160,7 @@ export const serviceData = [
   {
     icon: "/tourvis_og.jpg",
     title: "TOURVIS",
-    title2: "Travel Agency Website",
+    title2: "Online Travel Platform",
     description:
       "Full FE ownership of Ticket category" +
       "<br /><br />" +
@@ -177,7 +177,7 @@ export const serviceData = [
   {
     icon: "/privia_og.jpeg",
     title: "PRIVIA",
-    title2: "Travel Agency Website",
+    title2: "Online Travel Platform",
     description:
       "Full FE ownership of Ticket category" +
       "<br /><br />" +
