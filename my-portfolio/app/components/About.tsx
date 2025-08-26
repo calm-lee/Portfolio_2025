@@ -55,52 +55,44 @@ export default function About() {
             My Career
           </h1>
           <div className={"my-5"}>
-            <ul>
-              {careerData.map((career, index) => (
-                <li className={""} key={index}>
-                  <div className={"grid xl:grid-cols-8 sm:gap-8 md:gap-4"}>
-                    <header
-                      className={
-                        "xl:col-span-1 text-xl tracking-wide text-gray-400 pt-1"
-                      }
-                      aria-label={"career duration"}
-                    >
-                      2021.12
-                      <br />— 2025.2
-                    </header>
-                    <div
-                      className={"mt-6 xl:mt-3 xl:col-span-7"}
-                      aria-label={"career description"}
-                    >
-                      <h3
-                        className={
-                          "font-semibold text-gray-700 dark:text-white"
-                        }
-                        aria-label={career.position}
-                      >
-                        {career.position}
-                      </h3>
-                      <h4 className={"text-sm"} aria-label={career.company}>
-                        {career.company}
-                      </h4>
-                      <h4
-                        className={"text-xs  text-gray-500 dark:text-white/60"}
-                        aria-label={`${career.company_description}(${career.location})`}
-                      >
-                        {career.company_description} ({career.location})
-                      </h4>
-                      <p
-                        className={
-                          "mt-6 xl:mt-3 text-sm leading-loose text-gray-700 dark:text-white"
-                        }
-                        dangerouslySetInnerHTML={{ __html: career.description }}
-                        aria-label={"work description"}
-                      ></p>
-                    </div>
-                  </div>
-                </li>
-              ))}
-            </ul>
+            <div className={"grid xl:grid-cols-8 sm:gap-8 md:gap-4"}>
+              <header
+                className={
+                  "xl:col-span-1 text-xl tracking-wide text-gray-400 pt-1"
+                }
+                aria-label={"career duration"}
+              >
+                2021.12
+                <br />— 2025.2
+              </header>
+              <div
+                className={"mt-6 xl:mt-3 xl:col-span-7"}
+                aria-label={"career description"}
+              >
+                <h3
+                  className={"font-semibold text-gray-700 dark:text-white"}
+                  aria-label={careerData.position}
+                >
+                  {careerData.position}
+                </h3>
+                <h4 className={"text-sm"} aria-label={careerData.company}>
+                  {careerData.company}
+                </h4>
+                <h4
+                  className={"text-xs  text-gray-500 dark:text-white/60"}
+                  aria-label={`${careerData.company_description}(${careerData.location})`}
+                >
+                  {careerData.company_description} ({careerData.location})
+                </h4>
+                <p
+                  className={
+                    "mt-6 xl:mt-3 text-sm leading-loose text-gray-700 dark:text-white"
+                  }
+                  dangerouslySetInnerHTML={{ __html: careerData.description }}
+                  aria-label={"work description"}
+                ></p>
+              </div>
+            </div>
           </div>
         </motion.div>
         <motion.div

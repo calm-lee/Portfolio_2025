@@ -108,33 +108,31 @@ export const assets = {
   ey_circle,
 };
 
-export const careerData = [
-  {
-    duration: "2021.12 — 2025.2",
-    position: "Frontend Engineer",
-    company: "TIDESQUARE",
-    company_description: "Travel Agency",
-    location: "Seoul, South Korea",
-    description: `
+export const careerData = {
+  duration: "2021.12 — 2025.2",
+  position: "Frontend Engineer",
+  company: "TIDESQUARE",
+  company_description: "Travel Agency",
+  location: "Seoul, South Korea",
+  description: `
 · Took full FE ownership of the Ticket category at a travel agency.<br />
 · Developed and maintained the two travel websites using Next.js and Vue.js each.<br />
 · Improved UX by implementing features such as review summaries, stock alert, and real-time form validation etc.<br />
 · Enhanced performance and maintainability by modularising components and using React Hooks.<br />
 · Refactored legacy code by eliminating duplication and extracting common functions into reusable modules.<br />
 `,
-    tools: [
-      assets.nextjs,
-      assets.vuejs,
-      assets.react,
-      assets.aws,
-      assets.bitbucket,
-      assets.jira,
-      assets.swagger,
-      assets.sentry,
-      assets.storybook,
-    ],
-  },
-];
+  tools: [
+    assets.nextjs,
+    assets.vuejs,
+    assets.react,
+    assets.aws,
+    assets.bitbucket,
+    assets.jira,
+    assets.swagger,
+    assets.sentry,
+    assets.storybook,
+  ],
+};
 
 export const workData = [
   {

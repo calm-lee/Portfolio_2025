@@ -10,7 +10,6 @@ export default function Header() {
       transition: {
         duration: 1,
         repeat: Infinity,
-        ease: "easeInOut",
       },
     },
   };
