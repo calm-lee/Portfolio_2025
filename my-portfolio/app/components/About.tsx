@@ -4,7 +4,7 @@ import { motion } from "motion/react";
 import React from "react";
 import { isMobile, isTablet } from "react-device-detect";
 
-export default function About() {
+export default function About({ isDarkMode }: { isDarkMode: boolean }) {
   return (
     <motion.div
       id={"about"}
@@ -112,12 +112,12 @@ export default function About() {
             {toolsData.map((tool, index) => (
               <li
                 key={index}
-                className={"flex items-center justify-center w-8 md:w-10"}
+                className={`flex items-center justify-center w-8 md:w-10 ${isDarkMode ? "aspect-square rounded-full bg-white bg-opacity-40 border-[0.5px] border-gray-400" : ""}`}
               >
                 <Image
                   src={tool.src}
                   alt={tool.title}
-                  className={"w-5 md:w-8"}
+                  className={`w-5 md:w-8 ${isDarkMode ? "md:w-5" : ""}`}
                 />
               </li>
             ))}
