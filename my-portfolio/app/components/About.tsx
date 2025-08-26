@@ -99,7 +99,7 @@ export default function About() {
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           transition={{ duration: 1, delay: 0.5 }}
-          className={`${isMobile && !isTablet ? "w-full" : "w-4/5"} border-[0.5px] border-gray-400 rounded-xl p-5`}
+          className={`${isMobile && !isTablet ? "w-full" : "w-4/5"} border-[0.5px] border-gray-400 rounded-xl p-5 pb-8`}
         >
           <h4 className={"mb-5 text-gray-500 dark:text-white/80 uppercase"}>
             Tools I use
@@ -112,14 +112,12 @@ export default function About() {
             {toolsData.map((tool, index) => (
               <li
                 key={index}
-                className={
-                  "flex items-center justify-center aspect-square rounded-full w-8 md:w-10 bg-white bg-opacity-40 border-[0.5px] border-gray-400"
-                }
+                className={"flex items-center justify-center w-8 md:w-10"}
               >
                 <Image
                   src={tool.src}
                   alt={tool.title}
-                  className={"w-5 md:w-6"}
+                  className={"w-5 md:w-8"}
                 />
               </li>
             ))}
