@@ -77,13 +77,13 @@ export default function Header() {
           initial={{ y: 30, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.6, delay: 1.0 }}
-          href={"/chloe_lee_resume.pdf"}
+          href={"/chloe_lee_cv.pdf"}
           download
           className={
             "px-10 py-3 flex items-center border border-white bg-black text-white rounded-full gap-2 dark:bg-transparent"
           }
         >
-          my resume
+          CV is here
           <Image
             src={assets.download_icon_white}
             alt={"arrow_white"}
