@@ -6,49 +6,18 @@ import { isMobile, isTablet } from "react-device-detect";
 
 export default function About({ isDarkMode }: { isDarkMode: boolean }) {
   return (
-    <motion.div
-      id={"about"}
-      className={"w-full px-[12%] py-10 scroll-mt-20"}
-      initial={{ opacity: 0 }}
-      whileInView={{ opacity: 1 }}
-      transition={{ duration: 1 }}
-    >
-      <motion.h4
-        className={"text-center mb-2 text-lg font-Ovo"}
-        initial={{ opacity: 0, y: -20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5, delay: 0.3 }}
-      >
-        Introduction
-      </motion.h4>
-      <motion.h2
-        initial={{ opacity: 0, y: -20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5, delay: 0.5 }}
-        className={"text-center text-5xl font-Ovo"}
-      >
-        About me
-      </motion.h2>
-      <motion.p
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        transition={{ duration: 0.8, delay: 0.3 }}
-        className={"text-center max-w-2xl mx-auto mt-10  font-Ovo"}
-      >
+    <div id={"about"} className={"w-full px-[12%] py-10 scroll-mt-20"}>
+      <h4 className={"text-center mb-2 text-lg font-Ovo"}>Introduction</h4>
+      <h2 className={"text-center text-5xl font-Ovo"}>About me</h2>
+      <p className={"text-center max-w-2xl mx-auto mt-10  font-Ovo"}>
         Check out my journey and stack below.
-      </motion.p>
-      <motion.div
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        transition={{ duration: 0.6, delay: 0.5 }}
+      </p>
+      <div
         className={
           "w-full flex flex-col gap-10 my-10 justify-center items-center"
         }
       >
-        <motion.div
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          transition={{ duration: 1, delay: 0.5 }}
+        <div
           className={`${isMobile && !isTablet ? "w-full" : "w-4/5"} border-[0.5px] border-gray-400 rounded-xl font-Ovo p-5`}
         >
           <h1 className={"text-gray-500 dark:text-white/80 uppercase"}>
@@ -94,11 +63,8 @@ export default function About({ isDarkMode }: { isDarkMode: boolean }) {
               </div>
             </div>
           </div>
-        </motion.div>
-        <motion.div
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          transition={{ duration: 1, delay: 0.5 }}
+        </div>
+        <div
           className={`${isMobile && !isTablet ? "w-full" : "w-4/5"} border-[0.5px] border-gray-400 rounded-xl p-5 pb-8`}
         >
           <h4 className={"mb-5 text-gray-500 dark:text-white/80 uppercase"}>
@@ -122,8 +88,8 @@ export default function About({ isDarkMode }: { isDarkMode: boolean }) {
               </li>
             ))}
           </ul>
-        </motion.div>
-      </motion.div>
-    </motion.div>
+        </div>
+      </div>
+    </div>
   );
 }
