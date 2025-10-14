@@ -105,7 +105,7 @@ export default function Contact({ isDarkMode }: { isDarkMode: boolean }) {
             alt={"email"}
             className={"w-5"}
           />
-          <span>sn920647@gmail.com</span>
+          <span>chloe.lee.dev@gmail.com</span>
         </a>
       </p>
 
