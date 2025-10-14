@@ -74,11 +74,13 @@ export default function About({ isDarkMode }: { isDarkMode: boolean }) {
             className={
               "w-full grid grid-cols-6 xl:grid-cols-12 gap-5 justify-items-center"
             }
+            aria-label={"tools I use"}
           >
             {toolsData.map((tool, index) => (
               <li
                 key={index}
                 className={`flex items-center justify-center w-8 md:w-10 ${isDarkMode ? "aspect-square rounded-full bg-white bg-opacity-40 border-[0.5px] border-gray-400" : ""}`}
+                aria-label={tool.title}
               >
                 <Image
                   src={tool.src}

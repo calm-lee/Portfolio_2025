@@ -45,8 +45,11 @@ export default function Contact({ isDarkMode }: { isDarkMode: boolean }) {
     >
       <h4 className={"text-center mb-2 text-lg font-Ovo"}>Connect with me</h4>
       <h2 className={"text-center text-5xl font-Ovo"}>Get in touch</h2>
-      <ul className={"flex justify-center gap-10 my-8"}>
-        <li className={""}>
+      <ul
+        className={"flex justify-center gap-10 my-8"}
+        aria-label={"contact info"}
+      >
+        <li aria-label={"github"}>
           <a
             target={"_blank"}
             href={"https://github.com/calm-lee"}
@@ -59,7 +62,7 @@ export default function Contact({ isDarkMode }: { isDarkMode: boolean }) {
             />
           </a>
         </li>
-        <li>
+        <li aria-label={"linkedIn"}>
           <a
             className={"flex justify-center items-center gap-1"}
             target={"_blank"}
@@ -72,7 +75,7 @@ export default function Contact({ isDarkMode }: { isDarkMode: boolean }) {
             />
           </a>
         </li>
-        <li>
+        <li aria-label={"blog"}>
           <a
             target={"_blank"}
             href={"https://calm-lee.tistory.com/"}
@@ -95,9 +98,12 @@ export default function Contact({ isDarkMode }: { isDarkMode: boolean }) {
         I'm always happy to connect and explore new opportunities — feel free to
         reach out!
       </p>
-      <p className={"text-gray-500 dark:text-white/90 font-semibold text-sm"}>
+      <p
+        className={"text-gray-500 dark:text-white/90 font-semibold text-sm"}
+        aria-label={"email"}
+      >
         <a
-          href={"mailto:sn920647@gmail.com"}
+          href={"mailto:chloe.lee.dev@gmail.com"}
           className={"flex items-center justify-center gap-1 "}
         >
           <Image
