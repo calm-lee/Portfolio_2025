@@ -134,28 +134,6 @@ export const careerData = {
   ],
 };
 
-export const workData = [
-  {
-    title: "Tourvis",
-    bgImage: "/tourvis_tnt_main.png",
-  },
-  // {
-  //   title: "Geo based app",
-  //   description: "Mobile App",
-  //   bgImage: "/work-2.png",
-  // },
-  // {
-  //   title: "Photography site",
-  //   description: "Web Design",
-  //   bgImage: "/work-3.png",
-  // },
-  // {
-  //   title: "UI/UX designing",
-  //   description: "UI/UX Design",
-  //   bgImage: "/work-4.png",
-  // },
-];
-
 export const serviceData = [
   {
     icon: "/tourvis_og.jpg",
