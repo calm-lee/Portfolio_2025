@@ -1,7 +1,7 @@
 import { assets, serviceData, workDetailData } from "@/assets/assets";
 import Image from "next/image";
 import React, { useRef, useState } from "react";
-import Modal from "@/app/components/Modal";
+import Modal from "@/app/components/common/Modal";
 import { Swiper, SwiperRef, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import { Navigation, Pagination } from "swiper/modules";
@@ -111,7 +111,7 @@ export default function Work({ isDarkMode }: { isDarkMode: boolean }) {
                   </ul>
                 </div>
               </li>
-            ),
+            )
           )}
         </ul>
       </div>
@@ -186,7 +186,7 @@ export default function Work({ isDarkMode }: { isDarkMode: boolean }) {
                     className={`rounded-lg ${isDarkMode ? "" : "border-[0.5px] border-gray-200 shadow-lg shadow-gray-300"}`}
                     onSlideChange={() =>
                       setTinySwiperPcIdx(
-                        bigSwiperPcRef.current?.swiper.activeIndex ?? 0,
+                        bigSwiperPcRef.current?.swiper.activeIndex ?? 0
                       )
                     }
                     loop={false}
@@ -242,7 +242,7 @@ export default function Work({ isDarkMode }: { isDarkMode: boolean }) {
                     className={`border-[0.5px] border-gray-200 rounded-lg ${isDarkMode ? "" : "shadow-lg shadow-gray-300"}`}
                     onSlideChange={() =>
                       setTinySwiperMoIdx(
-                        bigSwiperMoRef.current?.swiper.activeIndex ?? 0,
+                        bigSwiperMoRef.current?.swiper.activeIndex ?? 0
                       )
                     }
                     loop={false}
