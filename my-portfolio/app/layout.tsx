@@ -4,6 +4,7 @@ import "./styles/globals.css";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
+import QueryProvider from "./providers/QueryProvider";
 
 const outfit = Outfit({
   subsets: ["latin"],
@@ -41,7 +42,7 @@ export default function RootLayout({
       <body
         className={`${outfit.className} ${ovo.className} antialiased leading-8 overflow-x-hidden dark:bg-darkTheme dark:text-white`}
       >
-        {children}
+        <QueryProvider>{children}</QueryProvider>
       </body>
     </html>
   );

@@ -1,4 +1,4 @@
-import { assets, serviceData, workDetailData } from "@/assets/assets";
+import { assets, serviceData } from "@/assets/assets";
 import Image from "next/image";
 import React, { useRef, useState } from "react";
 import Modal from "@/app/components/common/Modal";
@@ -6,6 +6,8 @@ import { Swiper, SwiperRef, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import { Navigation, Pagination } from "swiper/modules";
 import { isMobile, isTablet } from "react-device-detect";
+import { useQuery } from "@tanstack/react-query";
+import { WorkDetail } from "@/lib/types";
 
 export default function Work({ isDarkMode }: { isDarkMode: boolean }) {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -15,8 +17,19 @@ export default function Work({ isDarkMode }: { isDarkMode: boolean }) {
   const [tinySwiperPcIdx, setTinySwiperPcIdx] = useState(0);
   const [tinySwiperMoIdx, setTinySwiperMoIdx] = useState(0);
 
+  const { data: workDetailData = [], isLoading } = useQuery({
+    queryKey: ["works"],
+    queryFn: async () => {
+      const response = await fetch("/api/works");
+      if (!response.ok) throw new Error("Failed to fetch works");
+      return response.json();
+    },
+  });
+
   const setModalValues = (title: string) => {
-    const detail = workDetailData.find((item) => item.title === title);
+    const detail = workDetailData.find(
+      (item: WorkDetail) => item.title === title
+    );
     if (detail) {
       setModalContent(detail);
       setIsModalOpen(true);
